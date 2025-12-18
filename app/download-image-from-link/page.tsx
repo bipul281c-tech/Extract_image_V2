@@ -23,14 +23,35 @@ export const metadata: Metadata = {
         description: "Download images from any link instantly. Paste a URL and extract all images from the website. Free, fast, and secure.",
         type: "website",
         url: "https://www.extractpics.com/download-image-from-link",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-download-image-from-link.png",
+                width: 1200,
+                height: 630,
+                alt: "Download Image from Link - Free Online Image Downloader"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Download Image from Link - Free Online Image Downloader",
         description: "Download images from any link instantly. Paste a URL and extract all images from the website.",
+        images: ["https://www.extractpics.com/og-image-download-image-from-link.png"],
     },
     alternates: {
         canonical: "https://www.extractpics.com/download-image-from-link",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

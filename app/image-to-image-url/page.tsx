@@ -23,11 +23,36 @@ export const metadata: Metadata = {
         title: "Image to Image URL - Convert Images to URLs",
         description: "Convert images to image URLs instantly. Extract image URLs from any website and get direct links to images.",
         type: "website",
+        url: "https://www.extractpics.com/image-to-image-url",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-image-to-image-url.png",
+                width: 1200,
+                height: 630,
+                alt: "Image to Image URL - Convert Images to URLs"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Image to Image URL - Convert Images to URLs",
         description: "Convert images to image URLs instantly. Extract image URLs from any website.",
+        images: ["https://www.extractpics.com/og-image-image-to-image-url.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/image-to-image-url",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

@@ -23,11 +23,36 @@ export const metadata: Metadata = {
         title: "Image Downloader Free - Download Images from Any Website",
         description: "Free image downloader tool to download images from any website instantly. Extract and save images in bulk. 100% free forever.",
         type: "website",
+        url: "https://www.extractpics.com/image-downloader-free",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-image-downloader-free.png",
+                width: 1200,
+                height: 630,
+                alt: "Image Downloader Free - Download Images from Any Website"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Image Downloader Free - Download Images from Any Website",
         description: "Free image downloader tool to download images from any website instantly. 100% free forever.",
+        images: ["https://www.extractpics.com/og-image-image-downloader-free.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/image-downloader-free",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

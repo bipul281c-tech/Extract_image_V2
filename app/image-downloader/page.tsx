@@ -24,14 +24,35 @@ export const metadata: Metadata = {
         description: "Download images from any website instantly. Extract and save images in bulk with our free image downloader tool.",
         type: "website",
         url: "https://www.extractpics.com/image-downloader",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-image-downloader.png",
+                width: 1200,
+                height: 630,
+                alt: "Image Downloader - Free Online Tool"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Image Downloader - Free Online Tool",
         description: "Download images from any website instantly. Extract and save images in bulk with our free tool.",
+        images: ["https://www.extractpics.com/og-image-image-downloader.png"],
     },
     alternates: {
         canonical: "https://www.extractpics.com/image-downloader",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

@@ -22,11 +22,36 @@ export const metadata: Metadata = {
         title: "Extractor Tool - Advanced Web Image Extractor",
         description: "Download images from any website with our powerful extractor tool. Free, fast, and secure.",
         type: "website",
+        url: "https://www.extractpics.com/extractor-tool",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-extractor-tool.png",
+                width: 1200,
+                height: 630,
+                alt: "Extractor Tool - Advanced Web Image Extractor"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Extractor Tool - Advanced Web Image Extractor",
         description: "Download images from any website with our powerful extractor tool.",
+        images: ["https://www.extractpics.com/og-image-extractor-tool.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/extractor-tool",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

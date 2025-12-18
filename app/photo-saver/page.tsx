@@ -22,11 +22,36 @@ export const metadata: Metadata = {
         title: "Photo Saver - Save Photos from Any Website Instantly",
         description: "Save photos from any website instantly with our free photo saver tool. Download and save photos in bulk from web pages.",
         type: "website",
+        url: "https://www.extractpics.com/photo-saver",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-photo-saver.png",
+                width: 1200,
+                height: 630,
+                alt: "Photo Saver - Save Photos from Any Website Instantly"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Photo Saver - Save Photos from Any Website Instantly",
         description: "Save photos from any website instantly. Free tool to download and save photos in bulk.",
+        images: ["https://www.extractpics.com/og-image-photo-saver.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/photo-saver",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

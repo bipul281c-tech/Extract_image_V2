@@ -5,6 +5,41 @@ export const metadata: Metadata = {
     title: "About Boopul | AI Creator & No-Code Explorer",
     description: "Learn about Boopul - an AI-powered creator, no-code explorer, and disciplined builder focused on AI workflows, automation, and personal development.",
     keywords: ["AI creator", "no-code", "web development", "automation", "personal development", "fitness", "discipline"],
+    openGraph: {
+        title: "About Boopul | AI Creator & No-Code Explorer",
+        description: "Learn about Boopul - an AI-powered creator, no-code explorer, and disciplined builder focused on AI workflows, automation, and personal development.",
+        type: "website",
+        url: "https://www.extractpics.com/about",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-about.png",
+                width: 1200,
+                height: 630,
+                alt: "About Boopul - AI Creator & No-Code Explorer"
+            }
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "About Boopul | AI Creator & No-Code Explorer",
+        description: "Learn about Boopul - an AI-powered creator, no-code explorer, and disciplined builder.",
+        images: ["https://www.extractpics.com/og-image-about.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/about",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
 };
 
 export default function AboutPage() {

@@ -19,8 +19,84 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export const metadata: Metadata = {
-  title: "ExtractPics - Web Image Extractor",
-  description: "Extract images from any website instantly.",
+  metadataBase: new URL('https://www.extractpics.com'),
+  title: {
+    default: "ExtractPics - Web Image Extractor",
+    template: "%s | ExtractPics"
+  },
+  description: "Extract images from any website instantly. Free, fast, and secure image extraction tool.",
+  keywords: ["image extractor", "download images", "web scraper", "bulk downloader"],
+  authors: [{ name: "ExtractPics" }],
+  creator: "ExtractPics",
+  publisher: "ExtractPics",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.extractpics.com",
+    siteName: "ExtractPics",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ExtractPics - Image Extractor Tool"
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    creator: "@extractpics",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+      }
+    ]
+  },
+  manifest: "/manifest.json",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" }
+  ],
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "ExtractPics",
+  },
+  category: 'technology',
 };
 
 export default function RootLayout({

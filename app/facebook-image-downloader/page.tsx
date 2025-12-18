@@ -22,11 +22,36 @@ export const metadata: Metadata = {
         title: "Facebook Image Downloader - Download Facebook Photos Free",
         description: "Download images and photos from Facebook instantly. Free Facebook image downloader tool with no login required.",
         type: "website",
+        url: "https://www.extractpics.com/facebook-image-downloader",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-facebook-image-downloader.png",
+                width: 1200,
+                height: 630,
+                alt: "Facebook Image Downloader - Download Facebook Photos"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Facebook Image Downloader - Download Facebook Photos Free",
         description: "Download images and photos from Facebook instantly with our free tool.",
+        images: ["https://www.extractpics.com/og-image-facebook-image-downloader.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/facebook-image-downloader",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

@@ -22,11 +22,36 @@ export const metadata: Metadata = {
         title: "Link Picture - Extract & Download Images from URLs",
         description: "Extract pictures from links instantly. Free tool to download images from any URL or website.",
         type: "website",
+        url: "https://www.extractpics.com/link-picture",
+        siteName: "ExtractPics",
+        images: [
+            {
+                url: "https://www.extractpics.com/og-image-link-picture.png",
+                width: 1200,
+                height: 630,
+                alt: "Link Picture - Extract & Download Images from URLs"
+            }
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Link Picture - Extract & Download Images from URLs",
         description: "Extract pictures from links instantly. Free tool to download images from any URL.",
+        images: ["https://www.extractpics.com/og-image-link-picture.png"],
+    },
+    alternates: {
+        canonical: "https://www.extractpics.com/link-picture",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
     },
 };
 

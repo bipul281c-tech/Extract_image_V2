@@ -11,6 +11,7 @@ import { ImageData, ScrapeResponse, BatchUrlState } from "@/lib/types/scraper"
 import { filterImages } from "@/lib/filter-utils"
 import { deduplicateImages } from "@/lib/deduplicate-images"
 import { ImageGrid } from "./image-grid"
+import { BookmarkBanner } from "./bookmark-banner"
 import JSZip from "jszip"
 import { saveAs } from "file-saver"
 
@@ -50,6 +51,9 @@ export function ExtractPicsTool() {
 
     // Selection
     const [selectedIds, setSelectedIds] = React.useState<Set<number>>(new Set())
+
+    // Bookmark banner
+    const [showBookmarkBanner, setShowBookmarkBanner] = React.useState(false)
 
     const { queueRequest, activeCount, queueLength, isQueued } = useRequestQueue()
 
@@ -128,6 +132,10 @@ export function ExtractPicsTool() {
                         setStatus(`Found ${data.result.total || 0} images`)
                         eventSource.close()
                         setLoading(false)
+                        // Show bookmark banner after successful scan
+                        if (data.result.total && data.result.total > 0) {
+                            setShowBookmarkBanner(true)
+                        }
                         resolve()
                     } else if (data.status === 'error') {
                         setError(data.message || 'Scanning failed')
@@ -214,6 +222,10 @@ export function ExtractPicsTool() {
         const successCount = batchProgress.filter(p => p.status === 'completed').length
         setStatus(`Found ${uniqueImages.length} images from ${successCount} URLs. ${duplicatesRemoved} duplicates removed.`)
         setLoading(false)
+        // Show bookmark banner after successful batch scan
+        if (uniqueImages.length > 0) {
+            setShowBookmarkBanner(true)
+        }
     }
 
     const handleDownload = async () => {
@@ -473,6 +485,12 @@ export function ExtractPicsTool() {
                     )}
                 </div>
             </div>
+
+            {/* Bookmark Banner */}
+            <BookmarkBanner
+                show={showBookmarkBanner}
+                onClose={() => setShowBookmarkBanner(false)}
+            />
         </div>
     )
 }
