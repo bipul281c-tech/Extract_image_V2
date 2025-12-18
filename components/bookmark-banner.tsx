@@ -26,35 +26,19 @@ export function BookmarkBanner({ show, onClose }: BookmarkBannerProps) {
     }, [show])
 
     const handleAddBookmark = () => {
-        // Automatically trigger bookmark dialog
+        // Show instruction to user (browsers block programmatic bookmarking for security)
         const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0
         const shortcut = isMac ? '⌘ + D' : 'Ctrl + D'
 
-        // Try to programmatically trigger bookmark
         if (typeof window !== 'undefined') {
-            // Create a keyboard event to simulate Ctrl+D / Cmd+D
-            try {
-                const event = new KeyboardEvent('keydown', {
-                    key: 'd',
-                    code: 'KeyD',
-                    keyCode: 68,
-                    which: 68,
-                    ctrlKey: !isMac,
-                    metaKey: isMac,
-                    bubbles: true,
-                    cancelable: true
-                })
-                document.dispatchEvent(event)
-            } catch (e) {
-                // Fallback to alert if keyboard event doesn't work
-                alert(`Press ${shortcut} to bookmark this page!\n\nOr drag the bookmark icon to your bookmarks bar.`)
-            }
+            // Show user-friendly instruction
+            alert(`To bookmark this page:\n\n• Press ${shortcut} on your keyboard\n• Or drag the bookmark icon 📌 to your bookmarks bar\n• Or use your browser's bookmark button`)
         }
 
-        // Don't close immediately, let user complete the action
+        // Close banner after showing instructions
         setTimeout(() => {
             onClose()
-        }, 2000)
+        }, 500)
     }
 
     const handleDragStart = (e: React.DragEvent) => {

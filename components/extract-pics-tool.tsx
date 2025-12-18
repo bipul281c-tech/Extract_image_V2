@@ -73,6 +73,26 @@ export function ExtractPicsTool() {
         return filterImages(images, filters.selectedFormats, filters.minWidth, filters.selectedSourceUrls, filters.searchQuery)
     }, [images, filters])
 
+    // Update selectedIds when filters change to only include filtered image IDs
+    React.useEffect(() => {
+        if (filteredImages.length === 0) return
+
+        const filteredIds = new Set(filteredImages.map(img => img.id))
+        const updatedSelectedIds = new Set<number>()
+
+        // Keep only selected IDs that are still in filtered results
+        selectedIds.forEach(id => {
+            if (filteredIds.has(id)) {
+                updatedSelectedIds.add(id)
+            }
+        })
+
+        // Only update state if there's a change
+        if (updatedSelectedIds.size !== selectedIds.size) {
+            setSelectedIds(updatedSelectedIds)
+        }
+    }, [filteredImages])
+
     const availableFormats = React.useMemo(() => {
         const formats = new Map<string, number>()
         images.forEach(img => {
