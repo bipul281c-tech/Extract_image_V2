@@ -81,13 +81,13 @@ export function BookmarkBanner({ show, onClose }: BookmarkBannerProps) {
     return (
         <div
             className={cn(
-                "fixed bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out",
+                "fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-out",
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             )}
         >
-            <div className="bg-card/60 border-2 border-primary/20 shadow-lg backdrop-blur-xl rounded-none px-3 py-5 flex items-center gap-3 max-w-lg mx-4">
-                {/* Draggable Bookmark Icon */}
-                <div className="relative">
+            <div className="bg-card/60 border-2 border-primary/20 shadow-lg backdrop-blur-xl rounded-none px-2 py-2 md:px-3 md:py-5 flex items-center gap-2 md:gap-3 max-w-lg mx-4">
+                {/* Draggable Bookmark Icon - Hidden on mobile */}
+                <div className="relative hidden md:block">
                     <div
                         draggable="true"
                         onDragStart={handleDragStart}
@@ -117,31 +117,32 @@ export function BookmarkBanner({ show, onClose }: BookmarkBannerProps) {
                 </div>
 
                 {/* Content */}
-                <div className="flex-grow">
-                    <h3 className="text-foreground font-bold text-sm mb-1">
+                <div className="flex-grow min-w-0">
+                    <h3 className="text-foreground font-bold text-xs md:text-sm mb-0.5 md:mb-1 truncate">
                         Extraction Complete! 🎉
                     </h3>
-                    <p className="text-muted-foreground text-xs">
-                        Click to bookmark or drag icon to toolbar
+                    <p className="text-muted-foreground text-[10px] md:text-xs leading-tight md:leading-normal">
+                        <span className="hidden md:inline">Click to bookmark or drag icon to toolbar</span>
+                        <span className="md:hidden">Bookmark this page</span>
                     </p>
                 </div>
 
                 {/* Actions */}
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1.5 md:gap-2 flex-shrink-0">
                     <Button
                         onClick={handleAddBookmark}
                         size="sm"
-                        className="bg-primary text-primary-foreground hover:bg-primary/90 h-8 px-4 rounded-none font-bold text-xs shadow-none"
+                        className="bg-primary text-primary-foreground hover:bg-primary/90 h-7 md:h-8 px-2.5 md:px-4 rounded-none font-bold text-[10px] md:text-xs shadow-none"
                     >
-                        <IconBookmark size={14} className="mr-1" />
-                        Bookmark
+                        <IconBookmark size={12} className="md:mr-1" />
+                        <span className="hidden sm:inline md:ml-0">Bookmark</span>
                     </Button>
                     <button
                         onClick={onClose}
-                        className="w-8 h-8 rounded-none hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
+                        className="w-7 h-7 md:w-8 md:h-8 rounded-none hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
                         aria-label="Close"
                     >
-                        <IconX size={16} />
+                        <IconX size={14} className="md:w-4 md:h-4" />
                     </button>
                 </div>
             </div>

@@ -44,31 +44,15 @@ export function ImageGrid({ images, loading, error, selectedIds, onToggle, onTog
     }
 
     return (
-        <div className="space-y-6">
-            <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold text-foreground">
-                    {images.length} Images Found
-                </h3>
-                <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={onToggleAll}
-                    className="text-xs font-bold rounded-none shadow-none"
-                >
-                    {selectedIds.size === images.length ? "Deselect All" : "Select All"}
-                </Button>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {images.map((image) => (
-                    <ImageCard
-                        key={image.id}
-                        image={image}
-                        isSelected={selectedIds.has(image.id)}
-                        onToggle={() => onToggle(image.id)}
-                    />
-                ))}
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {images.map((image) => (
+                <ImageCard
+                    key={image.id}
+                    image={image}
+                    isSelected={selectedIds.has(image.id)}
+                    onToggle={() => onToggle(image.id)}
+                />
+            ))}
         </div>
     )
 }

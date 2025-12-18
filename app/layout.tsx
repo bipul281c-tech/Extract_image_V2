@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 import { IconStack, IconArrowUpRight } from "@tabler/icons-react";
+import Image from "next/image";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Navigation } from "@/components/navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.extractpics.com'),
@@ -66,19 +67,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
       { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" }
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ],
-    other: [
-      {
-        rel: "mask-icon",
-        url: "/safari-pinned-tab.svg",
-      }
-    ]
+    shortcut: ["/favicon.ico"]
   },
   manifest: "/manifest.json",
   viewport: {
@@ -116,24 +111,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {/* Navigation */}
-          <nav className="fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-md">
-            <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 rounded bg-primary flex items-center justify-center text-primary-foreground">
-                  <IconStack size={14} />
-                </div>
-                <span className="text-foreground font-bold tracking-tight text-sm">ExtractPics</span>
-              </div>
-              <div className="flex items-center gap-6 text-xs font-medium">
-                <a href="#" className="hover:text-primary transition-colors">Documentation</a>
-                <a href="#" className="hover:text-primary transition-colors">API</a>
-                <ThemeToggle />
-                <a href="#" className="text-primary-foreground bg-primary hover:bg-primary/90 px-4 py-2 rounded-full transition-all border border-transparent">
-                  Sign In
-                </a>
-              </div>
-            </div>
-          </nav>
+          <Navigation />
 
           <main className="flex-grow flex flex-col items-center pt-32 px-4 relative z-10">
             {children}
@@ -143,9 +121,13 @@ export default function RootLayout({
           <footer className="border-t border-border/40 bg-background py-8 mt-auto relative z-10">
             <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex items-center gap-2">
-                <div className="w-5 h-5 rounded bg-muted flex items-center justify-center text-muted-foreground">
-                  <IconStack size={12} />
-                </div>
+                <Image
+                  src="/logo.png"
+                  alt="ExtractPics Logo"
+                  width={20}
+                  height={20}
+                  className="rounded"
+                />
                 <span className="text-muted-foreground text-xs font-medium">© {new Date().getFullYear()} ExtractPics</span>
               </div>
               <div className="flex items-center gap-6 text-xs text-muted-foreground">

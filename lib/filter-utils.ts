@@ -5,7 +5,8 @@ export function filterImages(
     images: ImageData[],
     selectedFormats: Set<string>,
     minWidth: number,
-    selectedSourceUrls?: Set<string>
+    selectedSourceUrls?: Set<string>,
+    searchQuery?: string
 ): ImageData[] {
     return images.filter(image => {
         // Filter by format
@@ -26,6 +27,13 @@ export function filterImages(
         // Filter by source URL (batch mode)
         if (selectedSourceUrls && selectedSourceUrls.size > 0 && image.sourceUrl) {
             if (!selectedSourceUrls.has(image.sourceUrl)) return false;
+        }
+
+        // Filter by search query (image name)
+        if (searchQuery && searchQuery.trim()) {
+            const query = searchQuery.toLowerCase();
+            const name = image.name.toLowerCase();
+            if (!name.includes(query)) return false;
         }
 
         return true;

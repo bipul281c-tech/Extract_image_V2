@@ -146,8 +146,8 @@
   --accent: #0D0D0D;
   --accent-foreground: #EEEEEE;
   --destructive: #F87171;
-  --border: #171717;
-  --input: #171717;
+  --border: #3F3F3F;
+  --input: #3F3F3F;
   --ring: #F87B1B;
   --selection: #262626;
   /* Changed selection color in dark mode to something more neutral */

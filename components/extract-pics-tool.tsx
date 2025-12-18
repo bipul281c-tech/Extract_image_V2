@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { IconLink, IconScan, IconPhoto, IconArrowsUpDown, IconPhotoPlus, IconChevronDown, IconDownload, IconLoader2, IconAlertCircle } from "@tabler/icons-react"
+import { IconLink, IconScan, IconPhoto, IconArrowsUpDown, IconPhotoPlus, IconChevronDown, IconDownload, IconLoader2, IconAlertCircle, IconFilter, IconSearch, IconX, IconFilterOff } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { cn } from "@/lib/utils"
@@ -10,8 +10,19 @@ import { parseUrls } from "@/lib/parse-urls"
 import { ImageData, ScrapeResponse, BatchUrlState } from "@/lib/types/scraper"
 import { filterImages } from "@/lib/filter-utils"
 import { deduplicateImages } from "@/lib/deduplicate-images"
+import { getFileExtension } from "@/lib/parse-images"
 import { ImageGrid } from "./image-grid"
 import { BookmarkBanner } from "./bookmark-banner"
+import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent,
+    DropdownMenuCheckboxItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuRadioGroup,
+    DropdownMenuRadioItem,
+} from "@/components/ui/dropdown-menu"
 import JSZip from "jszip"
 import { saveAs } from "file-saver"
 
@@ -46,7 +57,8 @@ export function ExtractPicsTool() {
     const [filters, setFilters] = React.useState({
         selectedFormats: new Set<string>(),
         minWidth: 0,
-        selectedSourceUrls: new Set<string>()
+        selectedSourceUrls: new Set<string>(),
+        searchQuery: ''
     })
 
     // Selection
@@ -58,8 +70,69 @@ export function ExtractPicsTool() {
     const { queueRequest, activeCount, queueLength, isQueued } = useRequestQueue()
 
     const filteredImages = React.useMemo(() => {
-        return filterImages(images, filters.selectedFormats, filters.minWidth, filters.selectedSourceUrls)
+        return filterImages(images, filters.selectedFormats, filters.minWidth, filters.selectedSourceUrls, filters.searchQuery)
     }, [images, filters])
+
+    const availableFormats = React.useMemo(() => {
+        const formats = new Map<string, number>()
+        images.forEach(img => {
+            const ext = getFileExtension(img.name).toUpperCase()
+            if (ext) formats.set(ext, (formats.get(ext) || 0) + 1)
+        })
+        return Array.from(formats.entries()).sort((a, b) => a[0].localeCompare(b[0]))
+    }, [images])
+
+    const availableSourceUrls = React.useMemo(() => {
+        const urls = new Map<string, number>()
+        images.forEach(img => {
+            if (img.sourceUrl) {
+                urls.set(img.sourceUrl, (urls.get(img.sourceUrl) || 0) + 1)
+            }
+        })
+        return Array.from(urls.entries())
+    }, [images])
+
+    const activeFilterCount = React.useMemo(() => {
+        let count = 0
+        if (filters.selectedFormats.size > 0) count++
+        if (filters.minWidth > 0) count++
+        if (filters.selectedSourceUrls.size > 0) count++
+        if (filters.searchQuery.trim()) count++
+        return count
+    }, [filters])
+
+    const handleFormatToggle = (format: string) => {
+        const newFormats = new Set(filters.selectedFormats)
+        if (newFormats.has(format)) {
+            newFormats.delete(format)
+        } else {
+            newFormats.add(format)
+        }
+        setFilters(prev => ({ ...prev, selectedFormats: newFormats }))
+    }
+
+    const handleSizeSelect = (width: string) => {
+        setFilters(prev => ({ ...prev, minWidth: parseInt(width, 10) }))
+    }
+
+    const handleSourceUrlToggle = (url: string) => {
+        const newUrls = new Set(filters.selectedSourceUrls)
+        if (newUrls.has(url)) {
+            newUrls.delete(url)
+        } else {
+            newUrls.add(url)
+        }
+        setFilters(prev => ({ ...prev, selectedSourceUrls: newUrls }))
+    }
+
+    const handleClearAllFilters = () => {
+        setFilters({
+            selectedFormats: new Set(),
+            minWidth: 0,
+            selectedSourceUrls: new Set(),
+            searchQuery: ''
+        })
+    }
 
     const handleToggleSelect = (id: number) => {
         const newSelected = new Set(selectedIds)
@@ -336,15 +409,30 @@ export function ExtractPicsTool() {
                             </div>
                         </div>
 
-                        {/* Filters & Settings */}
-                        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-border/40 pt-6">
+                    </div>
+                </div>
 
-                            {/* Left Controls */}
-                            <div className="flex flex-wrap items-center gap-4">
+                {/* Sticky Controls Bar */}
+                {images.length > 0 && (
+                    <div className="sticky top-16 z-40 -mx-4 sm:-mx-6 px-4 sm:px-6 py-4 mb-8 backdrop-blur-md bg-background/95 border-b border-border shadow-sm animate-in fade-in slide-in-from-top-2 duration-300">
+                        {/* Top Row: Stats and Actions */}
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+                            {/* Left: Image Count & Status */}
+                            <div className="flex flex-wrap items-center gap-3">
                                 <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-foreground bg-primary/10 border border-primary/20 px-3 py-1.5 rounded-none">
                                     <div className="w-1.5 h-1.5 rounded-none bg-primary animate-pulse" />
-                                    {mode} Mode
+                                    {filteredImages.length === images.length
+                                        ? `${images.length} Images`
+                                        : `${filteredImages.length} of ${images.length} Images`
+                                    }
                                 </div>
+
+                                {activeFilterCount > 0 && (
+                                    <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-none">
+                                        <IconFilter size={12} />
+                                        {activeFilterCount} Active {activeFilterCount === 1 ? 'Filter' : 'Filters'}
+                                    </div>
+                                )}
 
                                 {isQueued && (
                                     <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-wider text-amber-500 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-none">
@@ -352,44 +440,219 @@ export function ExtractPicsTool() {
                                         {queueLength} in queue
                                     </div>
                                 )}
+                            </div>
+
+                            {/* Right: Download Button */}
+                            {selectedIds.size > 0 && (
+                                <Button
+                                    size="sm"
+                                    onClick={handleDownload}
+                                    className="bg-foreground text-background hover:bg-foreground/90 h-8 px-4 rounded-none font-bold text-xs flex items-center gap-1.5 shadow-none transition-all active:scale-95"
+                                >
+                                    <IconDownload size={14} />
+                                    Download {selectedIds.size}
+                                </Button>
+                            )}
+                        </div>
+
+                        {/* Bottom Row: Search & Filters */}
+                        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-3">
+                            {/* Search Input */}
+                            <div className="relative flex-1 w-full lg:max-w-xs">
+                                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground pointer-events-none">
+                                    <IconSearch size={14} stroke={2} />
+                                </div>
+                                <Input
+                                    type="text"
+                                    value={filters.searchQuery}
+                                    onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
+                                    placeholder="Search by name..."
+                                    className="h-8 pl-9 pr-8 text-xs bg-background/50 border-border/50 focus:border-primary focus:ring-2 focus:ring-primary/10 rounded-none"
+                                />
+                                {filters.searchQuery && (
+                                    <button
+                                        onClick={() => setFilters(prev => ({ ...prev, searchQuery: '' }))}
+                                        className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                                    >
+                                        <IconX size={14} />
+                                    </button>
+                                )}
+                            </div>
+
+                            {/* Filter Controls */}
+                            <div className="flex flex-wrap items-center gap-2">
+                                <Button
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={handleToggleAll}
+                                    className="h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 bg-muted/50 border-border/50 hover:bg-background rounded-none"
+                                >
+                                    {selectedIds.size === filteredImages.length ? "Deselect All" : "Select All"}
+                                </Button>
 
                                 <div className="h-4 w-px bg-border/50 hidden sm:block"></div>
 
-                                {/* Filter Controls */}
-                                <div className="flex gap-2">
-                                    <Button variant="outline" size="sm" className="h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 bg-muted/50 border-border/50 hover:bg-background rounded-none">
-                                        <IconPhoto size={14} />
-                                        All Formats
-                                        <IconChevronDown size={12} className="opacity-50" />
-                                    </Button>
-                                    <Button variant="outline" size="sm" className="h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 bg-muted/50 border-border/50 hover:bg-background rounded-none">
-                                        <IconArrowsUpDown size={14} />
-                                        Any Size
-                                        <IconChevronDown size={12} className="opacity-50" />
-                                    </Button>
-                                </div>
-                            </div>
+                                {/* Format Filter */}
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className={cn(
+                                                "h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 rounded-none transition-all",
+                                                filters.selectedFormats.size > 0
+                                                    ? "bg-blue-500/10 border-blue-500/30 text-blue-600 hover:bg-blue-500/20"
+                                                    : "bg-muted/50 border-border/50 hover:bg-background"
+                                            )}
+                                        >
+                                            <IconPhoto size={14} />
+                                            {filters.selectedFormats.size === 0 ? "Format" : `${filters.selectedFormats.size} Format${filters.selectedFormats.size > 1 ? 's' : ''}`}
+                                            <IconChevronDown size={12} className="opacity-50" />
+                                        </Button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className="w-56">
+                                        <DropdownMenuLabel className="text-xs">Image Formats</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        {availableFormats.length === 0 ? (
+                                            <div className="px-2 py-4 text-center text-[10px] text-muted-foreground uppercase font-bold">No formats found</div>
+                                        ) : (
+                                            availableFormats.map(([format, count]) => (
+                                                <DropdownMenuCheckboxItem
+                                                    key={format}
+                                                    checked={filters.selectedFormats.has(format)}
+                                                    onCheckedChange={() => handleFormatToggle(format)}
+                                                    className="text-xs"
+                                                >
+                                                    <div className="flex items-center justify-between w-full">
+                                                        <span>{format}</span>
+                                                        <span className="text-[10px] text-muted-foreground ml-2">({count})</span>
+                                                    </div>
+                                                </DropdownMenuCheckboxItem>
+                                            ))
+                                        )}
+                                        {filters.selectedFormats.size > 0 && (
+                                            <>
+                                                <DropdownMenuSeparator />
+                                                <Button
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    className="w-full justify-start rounded-none text-[10px] font-bold uppercase h-7"
+                                                    onClick={() => setFilters(prev => ({ ...prev, selectedFormats: new Set() }))}
+                                                >
+                                                    <IconX size={12} className="mr-1" />
+                                                    Clear
+                                                </Button>
+                                            </>
+                                        )}
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
 
-                            {/* Right Stats / Action */}
-                            <div className="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
-                                <div className="text-[10px] text-muted-foreground font-bold font-mono tracking-tight uppercase">
-                                    {status}
-                                </div>
+                                {/* Size Filter */}
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            className={cn(
+                                                "h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 rounded-none transition-all",
+                                                filters.minWidth > 0
+                                                    ? "bg-blue-500/10 border-blue-500/30 text-blue-600 hover:bg-blue-500/20"
+                                                    : "bg-muted/50 border-border/50 hover:bg-background"
+                                            )}
+                                        >
+                                            <IconArrowsUpDown size={14} />
+                                            {filters.minWidth === 0 ? "Size" : `> ${filters.minWidth}px`}
+                                            <IconChevronDown size={12} className="opacity-50" />
+                                        </Button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent className="w-48">
+                                        <DropdownMenuLabel className="text-xs">Minimum Width</DropdownMenuLabel>
+                                        <DropdownMenuSeparator />
+                                        <DropdownMenuRadioGroup value={filters.minWidth.toString()} onValueChange={handleSizeSelect}>
+                                            <DropdownMenuRadioItem value="0" className="text-xs">Any Size</DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="100" className="text-xs">{">"}  100px</DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="300" className="text-xs">{">"}  300px</DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="600" className="text-xs">{">"}  600px</DropdownMenuRadioItem>
+                                            <DropdownMenuRadioItem value="1000" className="text-xs">{">"}  1000px</DropdownMenuRadioItem>
+                                        </DropdownMenuRadioGroup>
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
 
-                                {selectedIds.size > 0 && (
-                                    <Button
-                                        size="sm"
-                                        onClick={handleDownload}
-                                        className="bg-foreground text-background hover:bg-foreground/90 h-8 px-4 rounded-none font-bold text-xs flex items-center gap-1.5 shadow-none"
-                                    >
-                                        <IconDownload size={14} />
-                                        Download {selectedIds.size}
-                                    </Button>
+                                {/* Source URL Filter (Batch Mode Only) */}
+                                {mode === "batch" && availableSourceUrls.length > 1 && (
+                                    <DropdownMenu>
+                                        <DropdownMenuTrigger asChild>
+                                            <Button
+                                                variant="outline"
+                                                size="sm"
+                                                className={cn(
+                                                    "h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 rounded-none transition-all",
+                                                    filters.selectedSourceUrls.size > 0
+                                                        ? "bg-blue-500/10 border-blue-500/30 text-blue-600 hover:bg-blue-500/20"
+                                                        : "bg-muted/50 border-border/50 hover:bg-background"
+                                                )}
+                                            >
+                                                <IconLink size={14} />
+                                                {filters.selectedSourceUrls.size === 0 ? "Source" : `${filters.selectedSourceUrls.size} URL${filters.selectedSourceUrls.size > 1 ? 's' : ''}`}
+                                                <IconChevronDown size={12} className="opacity-50" />
+                                            </Button>
+                                        </DropdownMenuTrigger>
+                                        <DropdownMenuContent className="w-64 max-h-80 overflow-y-auto">
+                                            <DropdownMenuLabel className="text-xs">Source URLs</DropdownMenuLabel>
+                                            <DropdownMenuSeparator />
+                                            {availableSourceUrls.map(([url, count]) => {
+                                                const displayUrl = url.length > 35 ? url.substring(0, 35) + '...' : url
+                                                return (
+                                                    <DropdownMenuCheckboxItem
+                                                        key={url}
+                                                        checked={filters.selectedSourceUrls.has(url)}
+                                                        onCheckedChange={() => handleSourceUrlToggle(url)}
+                                                        className="text-xs"
+                                                    >
+                                                        <div className="flex items-center justify-between w-full gap-2">
+                                                            <span className="truncate" title={url}>{displayUrl}</span>
+                                                            <span className="text-[10px] text-muted-foreground flex-shrink-0">({count})</span>
+                                                        </div>
+                                                    </DropdownMenuCheckboxItem>
+                                                )
+                                            })}
+                                            {filters.selectedSourceUrls.size > 0 && (
+                                                <>
+                                                    <DropdownMenuSeparator />
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        className="w-full justify-start rounded-none text-[10px] font-bold uppercase h-7"
+                                                        onClick={() => setFilters(prev => ({ ...prev, selectedSourceUrls: new Set() }))}
+                                                    >
+                                                        <IconX size={12} className="mr-1" />
+                                                        Clear
+                                                    </Button>
+                                                </>
+                                            )}
+                                        </DropdownMenuContent>
+                                    </DropdownMenu>
+                                )}
+
+                                {/* Clear All Filters */}
+                                {activeFilterCount > 0 && (
+                                    <>
+                                        <div className="h-4 w-px bg-border/50 hidden sm:block"></div>
+                                        <Button
+                                            variant="outline"
+                                            size="sm"
+                                            onClick={handleClearAllFilters}
+                                            className="h-8 text-[10px] font-bold uppercase tracking-wider gap-1.5 bg-destructive/10 border-destructive/30 text-destructive hover:bg-destructive/20 rounded-none transition-all"
+                                        >
+                                            <IconFilterOff size={14} />
+                                            Clear All
+                                        </Button>
+                                    </>
                                 )}
                             </div>
                         </div>
                     </div>
-                </div>
+                )}
 
                 {/* Progress Grid for Batch Mode */}
                 {mode === "batch" && batchProgress.length > 0 && (
@@ -425,13 +688,35 @@ export function ExtractPicsTool() {
                     )}
 
                     {!error && images.length > 0 && (
-                        <ImageGrid
-                            images={filteredImages}
-                            loading={loading}
-                            selectedIds={selectedIds}
-                            onToggle={handleToggleSelect}
-                            onToggleAll={handleToggleAll}
-                        />
+                        <>
+                            {filteredImages.length === 0 ? (
+                                <div className="rounded-none border-2 border-dashed border-border/60 bg-card/30 p-12 text-center shadow-none">
+                                    <div className="mx-auto w-16 h-16 rounded-none bg-background border border-border shadow-none flex items-center justify-center mb-4 text-muted-foreground">
+                                        <IconFilter size={32} />
+                                    </div>
+                                    <h3 className="text-foreground font-bold text-lg mb-2">No Images Match Filters</h3>
+                                    <p className="text-muted-foreground text-sm max-w-sm mx-auto mb-6">
+                                        Try adjusting your filters to see more results.
+                                    </p>
+                                    <Button
+                                        onClick={handleClearAllFilters}
+                                        variant="outline"
+                                        className="font-bold rounded-none shadow-none"
+                                    >
+                                        <IconFilterOff size={16} className="mr-2" />
+                                        Clear All Filters
+                                    </Button>
+                                </div>
+                            ) : (
+                                <ImageGrid
+                                    images={filteredImages}
+                                    loading={loading}
+                                    selectedIds={selectedIds}
+                                    onToggle={handleToggleSelect}
+                                    onToggleAll={handleToggleAll}
+                                />
+                            )}
+                        </>
                     )}
 
                     {!error && !loading && images.length === 0 && (
