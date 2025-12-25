@@ -113,6 +113,13 @@ export function Navigation() {
                     ))}
 
                     <Link
+                        href="/infographics"
+                        className="px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
+                    >
+                        Infographics
+                    </Link>
+
+                    <Link
                         href="/about"
                         className="px-3 py-2 rounded-md hover:bg-accent hover:text-accent-foreground transition-colors"
                     >
@@ -172,6 +179,14 @@ export function Navigation() {
                                     )}
                                 </div>
                             ))}
+
+                            <Link
+                                href="/infographics"
+                                className="block px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
+                                onClick={() => setMobileMenuOpen(false)}
+                            >
+                                Infographics
+                            </Link>
 
                             <Link
                                 href="/about"

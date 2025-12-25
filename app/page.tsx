@@ -101,6 +101,75 @@ export default function Page() {
         "sameAs": []
     };
 
+    // SiteNavigationElement Schema - Helps Google understand which pages to show as sitelinks
+    const siteNavigationSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "SiteLinkSearchBox",
+                "url": "https://www.extractpics.com",
+                "name": "ExtractPics Image Extractor",
+            },
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Image Extractor Tool",
+                "description": "Extract and download images from any website",
+                "url": "https://www.extractpics.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Bulk Image Extractor",
+                "description": "Extract images from multiple websites at once",
+                "url": "https://www.extractpics.com/bulk-extractor"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Image Downloader",
+                "description": "Download images from any website",
+                "url": "https://www.extractpics.com/image-downloader"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "About ExtractPics",
+                "description": "Learn more about our free image extraction tool",
+                "url": "https://www.extractpics.com/about"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Infographics",
+                "description": "Visual guides and infographics for image extraction",
+                "url": "https://www.extractpics.com/infographics"
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "How to Get Image URL",
+                "description": "Learn how to get URLs from images",
+                "url": "https://www.extractpics.com/how-to-get-an-image-url"
+            }
+        ]
+    };
+
+    // BreadcrumbList Schema
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.extractpics.com"
+            }
+        ]
+    };
+
     const faqItems = [
         {
             question: "How to extract a jpg image?",
@@ -150,9 +219,24 @@ export default function Page() {
 
     return (
         <>
+            {/* Structured Data for SEO and Sitelinks */}
             <StructuredData data={webAppSchema} />
             <StructuredData data={organizationSchema} />
+            <StructuredData data={siteNavigationSchema} />
+            <StructuredData data={breadcrumbSchema} />
+
             <ExtractPicsTool />
+
+            {/* Main heading for SEO - Positioned after the tool */}
+            <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-tight">
+                    Extract Images from Any Website - Free Image Extractor & Downloader
+                </h1>
+                <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto">
+                    Extract and download images from any website instantly. Free bulk image extractor supporting all formats. Fast, secure, and easy to use.
+                </p>
+            </div>
+
             <FeaturesGrid />
             <LandingFAQ items={faqItems} />
         </>

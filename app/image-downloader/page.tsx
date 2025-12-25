@@ -3,6 +3,7 @@ import { ExtractPicsTool } from "@/components/extract-pics-tool";
 import { LandingFAQ } from "@/components/landing-faq";
 import { IconDownload, IconShield, IconClock, IconCheck, IconBolt, IconCloud, IconSparkles, IconPhoto } from "@tabler/icons-react";
 import Link from "next/link";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
     title: "Image Downloader - Free Online Tool to Download Images from Any Website",

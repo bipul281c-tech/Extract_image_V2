@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IconBrain, IconCode, IconPalette, IconRocket, IconTrendingUp, IconHeart, IconBrandGithub, IconBrandInstagram, IconMail } from "@tabler/icons-react";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
     title: "About Boopul | AI Creator & No-Code Explorer",

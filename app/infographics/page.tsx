@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import seoImages from "@/data/seo-images.json";
 import Image from "next/image";
 import { StructuredData } from "@/components/structured-data";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
     title: "Infographics - Visual Guides | ExtractPics - Free Image Extraction Tips & Tricks",
@@ -68,9 +69,7 @@ export default function InfographicsPage() {
     };
 
     return (
-        <>
-            <StructuredData data={collectionSchema} />
-
+        <div className="w-full">
             {/* Hero Section */}
             <section className="w-full py-12 md:py-20 lg:py-24">
                 <div className="container mx-auto px-4 md:px-6 max-w-7xl">
@@ -213,6 +212,6 @@ export default function InfographicsPage() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

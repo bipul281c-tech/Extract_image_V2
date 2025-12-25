@@ -3,6 +3,7 @@ import { ExtractPicsTool } from "@/components/extract-pics-tool";
 import { LandingFAQ } from "@/components/landing-faq";
 import { IconBolt, IconCloud, IconShield, IconClock, IconDownload, IconRefresh, IconCheck, IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
     title: "Bulk Extractor - Extract Images from Multiple Websites | Free Tool",

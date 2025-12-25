@@ -19,6 +19,7 @@ import { IconStack, IconArrowUpRight } from "@tabler/icons-react";
 import Image from "next/image";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.extractpics.com'),
@@ -114,29 +115,115 @@ export default function RootLayout({
           {/* Navigation */}
           <Navigation />
 
-          <main className="flex-grow flex flex-col items-center pt-32 px-4 relative z-10">
+          <main className="flex-grow flex flex-col items-center pt-32 px-4 relative z-10 w-full">
+            <Breadcrumb />
             {children}
           </main>
 
           {/* Footer */}
-          <footer className="border-t border-border/40 bg-background py-8 mt-auto relative z-10">
-            <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/logo.png"
-                  alt="ExtractPics Logo"
-                  width={20}
-                  height={20}
-                  className="rounded"
-                />
-                <span className="text-muted-foreground text-xs font-medium">© {new Date().getFullYear()} ExtractPics</span>
+          <footer className="border-t border-border/40 bg-background py-12 mt-auto relative z-10">
+            <div className="max-w-7xl mx-auto px-6">
+              {/* Main Footer Content */}
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                {/* Brand Column */}
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <Image
+                      src="/logo.png"
+                      alt="ExtractPics Logo"
+                      width={24}
+                      height={24}
+                      className="rounded"
+                    />
+                    <span className="text-foreground font-bold text-sm">ExtractPics</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    Free image extraction tool for downloading images from any website. Fast, secure, and easy to use.
+                  </p>
+                </div>
+
+                {/* Tools Column */}
+                <div>
+                  <h3 className="text-foreground font-semibold text-sm mb-3">Tools</h3>
+                  <ul className="space-y-2 text-xs">
+                    <li>
+                      <a href="/bulk-extractor" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Bulk Extractor
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/image-downloader" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Image Downloader
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/extraction-tool" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Extraction Tool
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/image-saver" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Image Saver
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Resources Column */}
+                <div>
+                  <h3 className="text-foreground font-semibold text-sm mb-3">Resources</h3>
+                  <ul className="space-y-2 text-xs">
+                    <li>
+                      <a href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                        About
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/infographics" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Infographics
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/how-to-get-an-image-url" className="text-muted-foreground hover:text-foreground transition-colors">
+                        How to Get Image URL
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Legal Column */}
+                <div>
+                  <h3 className="text-foreground font-semibold text-sm mb-3">Legal</h3>
+                  <ul className="space-y-2 text-xs">
+                    <li>
+                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                        Terms of Service
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" className="text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1">
+                        GitHub <IconArrowUpRight size={10} />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="flex items-center gap-6 text-xs text-muted-foreground">
-                <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-                <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-                <a href="#" className="hover:text-foreground transition-colors flex items-center gap-1">
-                  GitHub <IconArrowUpRight size={10} />
-                </a>
+
+              {/* Bottom Bar */}
+              <div className="pt-6 border-t border-border/40">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                  <span className="text-muted-foreground text-xs font-medium">
+                    © {new Date().getFullYear()} ExtractPics. All rights reserved.
+                  </span>
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground">
+                    <span>Made with ❤️ for developers</span>
+                  </div>
+                </div>
               </div>
             </div>
           </footer>
