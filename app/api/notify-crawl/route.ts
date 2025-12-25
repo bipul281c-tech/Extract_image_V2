@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
 
     // Step 2: Notify search engines via IndexNow
     const indexNowKey = process.env.INDEXNOW_API_KEY;
-    const sitemapUrl = 'https://www.extractpics.com/sitemap.xml';
+    const sitemapUrl = 'https://extractpics.com/sitemap.xml';
 
     let indexNowStatus = 'skipped';
     let indexNowError = null;
@@ -46,9 +46,9 @@ export async function POST(request: NextRequest) {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            host: 'www.extractpics.com',
+            host: 'extractpics.com',
             key: indexNowKey,
-            keyLocation: `https://www.extractpics.com/${indexNowKey}.txt`,
+            keyLocation: `https://extractpics.com/${indexNowKey}.txt`,
             urlList: [sitemapUrl]
           }),
         });
@@ -115,8 +115,8 @@ export async function GET() {
       NOTIFY_CRAWL_SECRET: process.env.NOTIFY_CRAWL_SECRET ? 'configured' : 'not set (optional)',
     },
     usage: {
-      curl: 'curl -X POST https://www.extractpics.com/api/notify-crawl',
-      withAuth: 'curl -X POST https://www.extractpics.com/api/notify-crawl -H "Authorization: Bearer YOUR_SECRET"',
+      curl: 'curl -X POST https://extractpics.com/api/notify-crawl',
+      withAuth: 'curl -X POST https://extractpics.com/api/notify-crawl -H "Authorization: Bearer YOUR_SECRET"',
     },
     setupInstructions: {
       step1: 'Generate IndexNow API key from https://www.indexnow.org/getstarted',
