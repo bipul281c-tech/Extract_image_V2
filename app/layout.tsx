@@ -22,7 +22,7 @@ import { Navigation } from "@/components/navigation";
 import { Breadcrumb } from "@/components/breadcrumb";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.extractpics.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com'),
   title: {
     default: "ExtractPics - Web Image Extractor",
     template: "%s | ExtractPics"
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.extractpics.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com',
     siteName: "ExtractPics",
     images: [
       {

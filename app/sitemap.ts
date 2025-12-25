@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import seoImages from '@/data/seo-images.json'
+import { getAllPageRoutes } from '@/lib/route-discovery'
 
 type SEOImage = {
   id: string;
@@ -20,61 +21,57 @@ function getLatestImageDate(images: SEOImage[]): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://extractpics.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com'
   const currentDate = new Date()
 
   // Extract image URLs from seo-images.json
   const infographicImageUrls = seoImages.images.map(img => img.imageUrl);
   const latestImageDate = getLatestImageDate(seoImages.images);
 
-  // Static routes with high priority
-  const staticRoutes = [
-    {
-      url: baseUrl,
+  // Dynamically discover all routes
+  const allRoutes = getAllPageRoutes()
+
+  // Generate sitemap entries for all routes
+  const sitemapEntries: MetadataRoute.Sitemap = allRoutes.map(route => {
+    // Special handling for infographics
+    if (route === '/infographics') {
+      return {
+        url: `${baseUrl}${route}`,
+        lastModified: latestImageDate,
+        changeFrequency: 'weekly' as const,
+        priority: 0.9,
+        images: infographicImageUrls,
+      }
+    }
+
+    // Homepage
+    if (route === '/') {
+      return {
+        url: baseUrl,
+        lastModified: currentDate,
+        changeFrequency: 'daily' as const,
+        priority: 1.0,
+      }
+    }
+
+    // About page
+    if (route === '/about') {
+      return {
+        url: `${baseUrl}${route}`,
+        lastModified: currentDate,
+        changeFrequency: 'monthly' as const,
+        priority: 0.5,
+      }
+    }
+
+    // All other routes are SEO landing pages
+    return {
+      url: `${baseUrl}${route}`,
       lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1.0,
-    },
-    {
-      url: `${baseUrl}/about`,
-      lastModified: currentDate,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
-    },
-    {
-      url: `${baseUrl}/infographics`,
-      lastModified: latestImageDate,
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
-      images: infographicImageUrls,
-    },
-  ]
+      priority: 0.8,
+    }
+  })
 
-  // SEO landing pages - high priority for organic traffic
-  const landingPages = [
-    'bulk-extractor',
-    'download-image',
-    'download-image-from-link',
-    'extraction-tool',
-    'extractor-tool',
-    'facebook-image-downloader',
-    'image-downloader',
-    'image-downloader-free',
-    'image-link',
-    'image-saver',
-    'image-to-image-url',
-    'images-and-links',
-    'link-picture',
-    'photo-saver',
-    'photos-saver',
-    'pic-link',
-    'save-image',
-  ].map(slug => ({
-    url: `${baseUrl}/${slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  return [...staticRoutes, ...landingPages]
+  return sitemapEntries
 }
