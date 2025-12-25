@@ -1,8 +1,31 @@
 import { MetadataRoute } from 'next'
+import seoImages from '@/data/seo-images.json'
+
+type SEOImage = {
+  id: string;
+  imageUrl: string;
+  title: string;
+  description: string;
+  mainKeyword: string;
+  altText: string;
+  category: string;
+  datePublished: string;
+  dateModified: string;
+};
+
+function getLatestImageDate(images: SEOImage[]): Date {
+  if (images.length === 0) return new Date();
+  const dates = images.map(img => new Date(img.dateModified));
+  return new Date(Math.max(...dates.map(d => d.getTime())));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.extractpics.com'
   const currentDate = new Date()
+
+  // Extract image URLs from seo-images.json
+  const infographicImageUrls = seoImages.images.map(img => img.imageUrl);
+  const latestImageDate = getLatestImageDate(seoImages.images);
 
   // Static routes with high priority
   const staticRoutes = [
@@ -17,6 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'monthly' as const,
       priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/infographics`,
+      lastModified: latestImageDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+      images: infographicImageUrls,
     },
   ]
 

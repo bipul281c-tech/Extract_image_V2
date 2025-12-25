@@ -13,6 +13,45 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.extractpics.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'extractpics.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      // Cloudflare R2 support for infographic images
+      {
+        protocol: 'https',
+        hostname: '*.r2.cloudflarestorage.com',
+        pathname: '/**',
+      },
+      // Custom R2 domain support (if configured)
+      {
+        protocol: 'https',
+        hostname: 'images.extractpics.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'pub-*.r2.dev',
+        pathname: '/**',
+      },
+    ],
   },
 
   // Headers for SEO and security

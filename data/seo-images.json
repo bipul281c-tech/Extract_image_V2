@@ -1,0 +1,120 @@
+{
+    "images": [
+        {
+            "id": "4",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-copyright-fair-use.png",
+            "title": "Image Copyright & Fair Use Guide",
+            "description": "Understand the basics of image copyright, fair use factors, and the difference between royalty-free and rights-managed images.",
+            "mainKeyword": "image copyright fair use",
+            "altText": "Infographic explaining image copyright, public domain, creative commons, and fair use",
+            "category": "guide",
+            "datePublished": "2025-01-01",
+            "dateModified": "2025-01-01"
+        },
+        {
+            "id": "5",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-image-optimization.png",
+            "title": "Optimizing Images for Web Performance",
+            "description": "Learn how to speed up your website by choosing the right file formats, compression techniques, and lazy loading strategies.",
+            "mainKeyword": "optimize images for web",
+            "altText": "Infographic showing tips for image optimization, formats, and cdn usage",
+            "category": "performance",
+            "datePublished": "2025-01-02",
+            "dateModified": "2025-01-02"
+        },
+        {
+            "id": "6",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-reverse-image-search.png",
+            "title": "Reverse Image Search Mastery",
+            "description": "Master the art of reverse image search using Google, TinEye, Bing, and Yandex to find image sources and higher resolutions.",
+            "mainKeyword": "reverse image search",
+            "altText": "Infographic comparison of reverse image search tools including Google, TinEye, and Bing",
+            "category": "tutorial",
+            "datePublished": "2025-01-03",
+            "dateModified": "2025-01-03"
+        },
+        {
+            "id": "7",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-social-media-sizes.png",
+            "title": "2025 Social Media Image Sizes Guide",
+            "description": "Always use the correct image dimensions for major social platforms including Instagram, Facebook, Twitter, and LinkedIn.",
+            "mainKeyword": "social media image sizes",
+            "altText": "Infographic displaying correct image dimensions for major social media platforms",
+            "category": "social media",
+            "datePublished": "2025-01-04",
+            "dateModified": "2025-01-04"
+        },
+        {
+            "id": "8",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-file-formats.png",
+            "title": "Image File Formats Explained: JPEG, PNG, WEBP, SVG",
+            "description": "A clear comparison of common image file formats. Know when to use JPEG, PNG, WEBP, or SVG for your web projects.",
+            "mainKeyword": "image file formats",
+            "altText": "Infographic comparing pros and cons of JPEG, PNG, WEBP, and SVG formats",
+            "category": "technical",
+            "datePublished": "2025-01-05",
+            "dateModified": "2025-01-05"
+        },
+        {
+            "id": "9",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-alt-text-best-practices.webp",
+            "title": "Alt Text Best Practices for SEO & Accessibility",
+            "description": "A visual guide to writing perfect alt text. Learn do's and don'ts to improve your website's accessibility and image SEO ranking.",
+            "mainKeyword": "image alt text best practices",
+            "altText": "Infographic illustrating best practices for writing image alt text",
+            "category": "seo",
+            "datePublished": "2025-01-06",
+            "dateModified": "2025-01-06"
+        },
+        {
+            "id": "10",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-image-sitemaps.webp",
+            "title": "Image Sitemaps Explained",
+            "description": "Understand how image sitemaps help search engines discover and index your images, boosting your visibility in Google Image Search.",
+            "mainKeyword": "image sitemaps",
+            "altText": "Infographic showing the structure and benefits of image sitemaps",
+            "category": "technical seo",
+            "datePublished": "2025-01-07",
+            "dateModified": "2025-01-07"
+        },
+        {
+            "id": "11",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-lossy-vs-lossless.webp",
+            "title": "Lossy vs. Lossless Image Compression",
+            "description": "Compare lossy and lossless compression methods. Deciding between smaller file sizes (JPEG) and higher quality (PNG) for your needs.",
+            "mainKeyword": "lossy vs lossless compression",
+            "altText": "Infographic comparing lossy and lossless image compression techniques",
+            "category": "performance",
+            "datePublished": "2025-01-08",
+            "dateModified": "2025-01-08"
+        },
+        {
+            "id": "12",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-favicon-design-tips.webp",
+            "title": "Favicon Design Essentials",
+            "description": "Tips for creating effective favicons. Cover simplicity, contrast, sizes, and formats to ensure your brand looks great in browser tabs.",
+            "mainKeyword": "favicon design tips",
+            "altText": "Infographic with design tips for creating effective favicons",
+            "category": "design",
+            "datePublished": "2025-01-09",
+            "dateModified": "2025-01-09"
+        },
+        {
+            "id": "13",
+            "imageUrl": "https://pub-141831e61e69445289222976a15b6fb3.r2.dev/infographic-cdn-benefits.webp",
+            "title": "Why Use an Image CDN?",
+            "description": "Explore the benefits of using a Content Delivery Network for images, including faster load times, reliability, and global reach.",
+            "mainKeyword": "cdn benefits for images",
+            "altText": "Infographic explaining the benefits of using an image CDN",
+            "category": "performance",
+            "datePublished": "2025-01-10",
+            "dateModified": "2025-01-10"
+        }
+    ],
+    "siteInfo": {
+        "siteName": "ExtractPics",
+        "siteUrl": "https://www.extractpics.com",
+        "defaultAuthor": "ExtractPics Team",
+        "logoUrl": "https://www.extractpics.com/logo.png"
+    }
+}

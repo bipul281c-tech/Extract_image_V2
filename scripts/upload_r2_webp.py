@@ -1,0 +1,99 @@
+
+import boto3
+import os
+from PIL import Image
+
+# Configuration
+R2_ACCESS_KEY_ID = "4320a1be88c601209a8fef734cc436c8"
+R2_SECRET_ACCESS_KEY = "99fa05fff19ff66f44d7857e97af898234c129013282d13b87f5de81cd593ea9"
+R2_ACCOUNT_ID = "ab54ca2d01df4886aa0c3f240ace806d"
+R2_BUCKET_NAME = "imgtourl"
+R2_PUBLIC_URL = "https://pub-141831e61e69445289222976a15b6fb3.r2.dev"
+
+ENDPOINT_URL = f"https://{R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+
+s3 = boto3.client(
+    "s3",
+    endpoint_url=ENDPOINT_URL,
+    aws_access_key_id=R2_ACCESS_KEY_ID,
+    aws_secret_access_key=R2_SECRET_ACCESS_KEY,
+)
+
+ARTIFACT_DIR = "/Users/bipulkumar/.gemini/antigravity/brain/d7967891-24ba-4b47-941e-76cf79d43f92"
+
+# Mapping: original_filename_part -> new_filename_base
+images_to_upload = [
+    {
+        "search": "alt_text_best_practices_infographic",
+        "new_name": "infographic-alt-text-best-practices.webp"
+    },
+    {
+        "search": "image_sitemaps_infographic",
+        "new_name": "infographic-image-sitemaps.webp"
+    },
+    {
+        "search": "lossy_vs_lossless_compression_infographic",
+        "new_name": "infographic-lossy-vs-lossless.webp"
+    },
+    {
+        "search": "favicon_design_tips_infographic",
+        "new_name": "infographic-favicon-design-tips.webp"
+    },
+    {
+        "search": "cdn_benefits_infographic",
+        "new_name": "infographic-cdn-benefits.webp"
+    }
+]
+
+print("Starting WebP conversion and upload...")
+
+# Find files
+files = os.listdir(ARTIFACT_DIR)
+
+for img_map in images_to_upload:
+    found_file = None
+    for f in files:
+        if img_map["search"] in f and f.endswith(".png"):
+            found_file = f
+            break
+    
+    if found_file:
+        file_path = os.path.join(ARTIFACT_DIR, found_file)
+        new_name = img_map["new_name"]
+        
+        print(f"Processing {found_file}...")
+        
+        try:
+            # Open image
+            with Image.open(file_path) as img:
+                # Convert to RGB (in case of RGBA) to save as WebP nicely, 
+                # although WebP supports transparency. If transparency is critical, keep it.
+                # Usually safely keeping as is works for WebP.
+                
+                # Save as WebP in memory or tmp file? 
+                # Let's verify we can save directly.
+                webp_path = file_path.replace(".png", ".webp")
+                img.save(webp_path, "WEBP", quality=85)
+                
+            print(f"Converted to {webp_path}")
+
+            # Upload WebP
+            print(f"Uploading {new_name}...")
+            with open(webp_path, "rb") as f:
+                s3.upload_fileobj(
+                    f, 
+                    R2_BUCKET_NAME, 
+                    new_name,
+                    ExtraArgs={'ContentType': "image/webp"}
+                )
+            print(f"Success! URL: {R2_PUBLIC_URL}/{new_name}")
+            
+            # Clean up local webp (optional)
+            os.remove(webp_path)
+            
+        except Exception as e:
+            print(f"Failed to process/upload {found_file}: {e}")
+    else:
+        print(f"Could not find file matching {img_map['search']}")
+
+print("Done.")
