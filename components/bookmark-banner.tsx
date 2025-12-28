@@ -1,19 +1,53 @@
 "use client"
 
 import * as React from "react"
-import { IconBookmark, IconX, IconGripVertical } from "@tabler/icons-react"
+import { IconBookmark, IconX, IconGripVertical, IconShare, IconBrandX, IconBrandLinkedin, IconLink } from "@tabler/icons-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 interface BookmarkBannerProps {
     show: boolean
     onClose: () => void
+    imageCount?: number
 }
 
-export function BookmarkBanner({ show, onClose }: BookmarkBannerProps) {
+export function BookmarkBanner({ show, onClose, imageCount = 0 }: BookmarkBannerProps) {
     const [isVisible, setIsVisible] = React.useState(false)
     const [showTooltip, setShowTooltip] = React.useState(false)
     const [isDragging, setIsDragging] = React.useState(false)
+    const [copied, setCopied] = React.useState(false)
+
+    const shareText = imageCount > 0
+        ? `Just extracted ${imageCount} images using ExtractPics - free and no signup required!`
+        : `Check out ExtractPics - extract images from any website for free!`
+
+    const shareUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.extractpics.com'
+
+    const handleShareTwitter = () => {
+        const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`
+        window.open(tweetUrl, '_blank', 'width=550,height=420')
+    }
+
+    const handleShareLinkedIn = () => {
+        const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`
+        window.open(linkedInUrl, '_blank', 'width=550,height=420')
+    }
+
+    const handleCopyLink = async () => {
+        try {
+            await navigator.clipboard.writeText(shareUrl)
+            setCopied(true)
+            setTimeout(() => setCopied(false), 2000)
+        } catch (err) {
+            console.error('Failed to copy:', err)
+        }
+    }
 
     React.useEffect(() => {
         if (show) {
@@ -121,6 +155,35 @@ export function BookmarkBanner({ show, onClose }: BookmarkBannerProps) {
                         <IconBookmark size={12} className="md:mr-1" />
                         <span className="hidden sm:inline md:ml-0">Bookmark</span>
                     </Button>
+
+                    {/* Share Dropdown */}
+                    <DropdownMenu>
+                        <DropdownMenuTrigger asChild>
+                            <Button
+                                size="sm"
+                                variant="outline"
+                                className="h-7 md:h-8 px-2.5 md:px-3 rounded-none font-bold text-[10px] md:text-xs border-primary/30 hover:bg-primary/10"
+                            >
+                                <IconShare size={12} className="md:mr-1" />
+                                <span className="hidden sm:inline">Share</span>
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent align="end" className="rounded-none w-40">
+                            <DropdownMenuItem onClick={handleShareTwitter} className="cursor-pointer rounded-none text-xs">
+                                <IconBrandX size={14} className="mr-2" />
+                                Share on X
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={handleShareLinkedIn} className="cursor-pointer rounded-none text-xs">
+                                <IconBrandLinkedin size={14} className="mr-2" />
+                                LinkedIn
+                            </DropdownMenuItem>
+                            <DropdownMenuItem onClick={handleCopyLink} className="cursor-pointer rounded-none text-xs">
+                                <IconLink size={14} className="mr-2" />
+                                {copied ? 'Copied!' : 'Copy Link'}
+                            </DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+
                     <button
                         onClick={onClose}
                         className="w-7 h-7 md:w-8 md:h-8 rounded-none hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"

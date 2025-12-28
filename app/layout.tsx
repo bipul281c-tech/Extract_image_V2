@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -20,6 +20,9 @@ import Image from "next/image";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navigation } from "@/components/navigation";
 import { Breadcrumb } from "@/components/breadcrumb";
+import { ServiceWorkerRegister } from "@/components/service-worker-register";
+import { PwaInstallPrompt } from "@/components/pwa-install-prompt";
+import { EmailCapture } from "@/components/email-capture";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com'),
@@ -81,22 +84,23 @@ export const metadata: Metadata = {
     shortcut: ["/favicon.ico"]
   },
   manifest: "/manifest.json",
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#000000" }
-  ],
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
     title: "ExtractPics",
   },
   category: 'technology',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#000000" }
+  ],
 };
 
 export default function RootLayout({
@@ -115,6 +119,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ServiceWorkerRegister />
           {/* Navigation */}
           <Navigation />
 
@@ -231,6 +236,8 @@ export default function RootLayout({
             </div>
           </footer>
 
+          <PwaInstallPrompt />
+          <EmailCapture />
           <Analytics />
         </ThemeProvider>
       </body>
