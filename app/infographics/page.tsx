@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         title: "Infographics - Visual Guides | ExtractPics",
         description: "Comprehensive visual guides for image extraction, bulk downloading, and website image management.",
         type: "website",
-        url: "https://www.extractpics.com/infographics",
+        url: "https://extractpics.com/infographics",
         siteName: "ExtractPics",
     },
     twitter: {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         description: "Visual guides for image extraction and bulk downloading techniques.",
     },
     alternates: {
-        canonical: "https://www.extractpics.com/infographics"
+        canonical: "https://extractpics.com/infographics"
     },
     robots: {
         index: true,
@@ -49,7 +49,7 @@ export default function InfographicsPage() {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Image Extraction Infographics",
-        "url": "https://www.extractpics.com/infographics",
+        "url": "https://extractpics.com/infographics",
         "description": "Visual guides about downloading images from websites and bulk extraction techniques",
         "mainEntity": {
             "@type": "ItemList",

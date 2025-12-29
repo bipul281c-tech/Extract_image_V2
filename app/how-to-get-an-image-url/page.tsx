@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "How to Get an Image URL - Extract Image Links Instantly",
         description: "Learn how to get an image URL from any website. Free tool to extract and copy image URLs instantly.",
         type: "website",
-        url: "https://www.extractpics.com/how-to-get-an-image-url",
+        url: "https://extractpics.com/how-to-get-an-image-url",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-url.png",
+                url: "https://extractpics.com/og-image-url.png",
                 width: 1200,
                 height: 630,
                 alt: "How to Get an Image URL - Complete Guide"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "How to Get an Image URL - Extract Image Links Instantly",
         description: "Learn how to get an image URL from any website. Free and easy.",
-        images: ["https://www.extractpics.com/og-image-url.png"],
+        images: ["https://extractpics.com/og-image-url.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/how-to-get-an-image-url",
+        canonical: "https://extractpics.com/how-to-get-an-image-url",
     },
     robots: {
         index: true,
@@ -335,7 +335,7 @@ export default function HowToGetImageUrlPage() {
                         Ready to Get Image URLs?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Learn <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">how to get an image URL</a> with our free tool. Extract and copy image URLs instantly.
+                        Learn <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">how to get an image URL</a> with our free tool. Extract and copy image URLs instantly.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconLink size={20} />

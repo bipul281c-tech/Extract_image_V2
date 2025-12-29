@@ -110,13 +110,13 @@ If you have GitHub Actions configured, the crawl notification happens automatica
 curl -X POST http://localhost:3000/api/notify-crawl
 
 # Production
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 ```
 
 **Option C: With Authentication (if NOTIFY_CRAWL_SECRET is set)**
 
 ```bash
-curl -X POST https://www.extractpics.com/api/notify-crawl \
+curl -X POST https://extractpics.com/api/notify-crawl \
   -H "Authorization: Bearer YOUR_SECRET_TOKEN"
 ```
 
@@ -133,7 +133,7 @@ curl -X POST https://www.extractpics.com/api/notify-crawl \
       "error": null
     }
   },
-  "sitemapUrl": "https://www.extractpics.com/sitemap.xml"
+  "sitemapUrl": "https://extractpics.com/sitemap.xml"
 }
 ```
 
@@ -142,23 +142,23 @@ curl -X POST https://www.extractpics.com/api/notify-crawl \
 **Immediate Checks (Within 5 minutes):**
 
 1. **View Updated Sitemap**
-   - Visit: https://www.extractpics.com/sitemap.xml
+   - Visit: https://extractpics.com/sitemap.xml
    - Verify your new image URL appears in `<image:image>` tags
 
 2. **Check Infographics Page**
-   - Visit: https://www.extractpics.com/infographics
+   - Visit: https://extractpics.com/infographics
    - Confirm new infographic displays correctly
    - Check that image loads (not 404 error)
 
 3. **Validate XML**
    - Use: https://www.xml-sitemaps.com/validate-xml-sitemap.html
-   - Paste: https://www.extractpics.com/sitemap.xml
+   - Paste: https://extractpics.com/sitemap.xml
    - Ensure no validation errors
 
 **Google Search Console (Within 24-48 hours):**
 
 1. Go to: https://search.google.com/search-console
-2. Select property: `www.extractpics.com`
+2. Select property: `extractpics.com`
 3. Navigate to: Sitemaps
 4. Check last crawl date updated
 5. Verify no crawl errors
@@ -201,7 +201,7 @@ echo "1234567890abcdef1234567890abcdef" > public/1234567890abcdef1234567890abcde
 **Step 4: Verify Configuration**
 
 ```bash
-curl https://www.extractpics.com/api/notify-crawl
+curl https://extractpics.com/api/notify-crawl
 ```
 
 Check that `INDEXNOW_API_KEY` shows as "configured".
@@ -226,7 +226,7 @@ jobs:
     steps:
       - name: Notify crawl API
         run: |
-          curl -X POST https://www.extractpics.com/api/notify-crawl \
+          curl -X POST https://extractpics.com/api/notify-crawl \
             -H "Authorization: Bearer ${{ secrets.NOTIFY_CRAWL_SECRET }}"
 ```
 

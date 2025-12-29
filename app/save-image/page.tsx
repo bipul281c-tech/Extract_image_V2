@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Save Image - Free Image Saver Tool",
         description: "Save images from any website instantly. Extract and save pictures in bulk with our free image saver tool.",
         type: "website",
-        url: "https://www.extractpics.com/save-image",
+        url: "https://extractpics.com/save-image",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-save-image.png",
+                url: "https://extractpics.com/og-image-save-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Save Image - Free Image Saver Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Save Image - Free Image Saver Tool",
         description: "Save images from any website instantly. Extract and save pictures in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-save-image.png"],
+        images: ["https://extractpics.com/og-image-save-image.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/save-image",
+        canonical: "https://extractpics.com/save-image",
     },
     robots: {
         index: true,
@@ -139,7 +139,7 @@ export default function SaveImagePage() {
                         </div>
 
                         <p className="text-sm text-muted-foreground pt-4">
-                            Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer">ExtractPics.com</a> - Your trusted <a href="https://www.extractpics.com/" className="text-primary hover:underline">save image</a> tool
+                            Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer">ExtractPics.com</a> - Your trusted <a href="https://extractpics.com/" className="text-primary hover:underline">save image</a> tool
                         </p>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ export default function SaveImagePage() {
                                 Save Images the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of saving images are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline">save image</a> tool automates the entire process, saving you time and effort.
+                                Traditional methods of saving images are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline">save image</a> tool automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Save images in original quality" />

@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Website Photo Downloader - Download Photos from Any Website",
         description: "Download photos from any website with our free website photo downloader. Extract and save photos from web pages in bulk.",
         type: "website",
-        url: "https://www.extractpics.com/website-photo-downloader",
+        url: "https://extractpics.com/website-photo-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-website-photo-downloader.png",
+                url: "https://extractpics.com/og-image-website-photo-downloader.png",
                 width: 1200,
                 height: 630,
                 alt: "Website Photo Downloader - Free Photo Extractor"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Website Photo Downloader - Download Photos from Any Website",
         description: "Download photos from any website with our free website photo downloader. Extract and save photos in bulk.",
-        images: ["https://www.extractpics.com/og-image-website-photo-downloader.png"],
+        images: ["https://extractpics.com/og-image-website-photo-downloader.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/website-photo-downloader",
+        canonical: "https://extractpics.com/website-photo-downloader",
     },
     robots: {
         index: true,
@@ -270,7 +270,7 @@ export default function WebsitePhotoDownloaderPage() {
                                 The Best Website Photo Downloader
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading photos from websites are slow and tedious. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">website photo downloader</Link> automates the entire process, saving you time and effort.
+                                Traditional methods of downloading photos from websites are slow and tedious. Our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">website photo downloader</Link> automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download photos in original quality" />
@@ -329,7 +329,7 @@ export default function WebsitePhotoDownloaderPage() {
                         Ready to Download Photos from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">website photo downloader</Link> now. No registration, no downloads, completely free.
+                        Start using our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">website photo downloader</Link> now. No registration, no downloads, completely free.
                     </p>
                     <Link href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

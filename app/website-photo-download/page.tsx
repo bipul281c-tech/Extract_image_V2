@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Website Photo Download - Download Photos from Any Website",
         description: "Download photos from any website instantly. Extract and save all photos from websites in bulk with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/website-photo-download",
+        url: "https://extractpics.com/website-photo-download",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Website Photo Download - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Website Photo Download - Download Photos from Any Website",
         description: "Download photos from any website instantly. Extract and save all photos in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/website-photo-download",
+        canonical: "https://extractpics.com/website-photo-download",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function WebsitePhotoDownloadPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The easiest <strong className="text-foreground">website photo download</strong> solution. Extract and save all photos from any website in seconds. Download individually or in bulk. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The easiest <strong className="text-foreground">website photo download</strong> solution. Extract and save all photos from any website in seconds. Download individually or in bulk. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -271,7 +271,7 @@ export default function WebsitePhotoDownloadPage() {
                         Ready to Download Photos from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">website photo download</a> tool now. No registration, completely free.
+                        Start using our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">website photo download</a> tool now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

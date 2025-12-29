@@ -46,7 +46,7 @@ R2_ACCOUNT_ID: ab54ca2d01df4886aa0c3f240ace806d
 ```
 API Key: a96c4f160eaf78715f1387717333cddb
 Key File: /public/a96c4f160eaf78715f1387717333cddb.txt
-Key URL: https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+Key URL: https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
 ```
 
 ### 4. Setup Automation
@@ -119,8 +119,8 @@ git push
 Follow the complete guide in `/docs/bing-webmaster-setup.md`:
 
 1. Register at https://www.bing.com/webmasters
-2. Add and verify `www.extractpics.com`
-3. Submit sitemap: `https://www.extractpics.com/sitemap.xml`
+2. Add and verify `extractpics.com`
+3. Submit sitemap: `https://extractpics.com/sitemap.xml`
 4. Monitor IndexNow submissions in dashboard
 
 #### 4. Test Production Setup
@@ -129,10 +129,10 @@ After deployment:
 
 ```bash
 # Test key file is accessible
-curl https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+curl https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
 
 # Trigger first IndexNow notification
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # Expected response:
 # {"success": true, "indexNow": {"status": "success"}}
@@ -230,9 +230,9 @@ That's it! The sitemap updates automatically.
 - [ ] Update R2 image URLs in seo-images.json
 - [ ] Deploy to Vercel
 - [ ] Add `INDEXNOW_API_KEY` to Vercel env vars
-- [ ] Test key file: `https://www.extractpics.com/[key].txt`
-- [ ] Test API: `curl -X POST https://www.extractpics.com/api/notify-crawl`
-- [ ] Verify sitemap: `https://www.extractpics.com/sitemap.xml`
+- [ ] Test key file: `https://extractpics.com/[key].txt`
+- [ ] Test API: `curl -X POST https://extractpics.com/api/notify-crawl`
+- [ ] Verify sitemap: `https://extractpics.com/sitemap.xml`
 - [ ] Submit to Bing Webmaster Tools
 - [ ] Monitor IndexNow submissions in Bing dashboard
 
@@ -289,22 +289,22 @@ R2_SECRET_ACCESS_KEY=99fa05fff19ff66f44d7857e97af898234c129013282d13b87f5de81cd5
 
 ```bash
 # IndexNow Notification
-POST https://www.extractpics.com/api/notify-crawl
+POST https://extractpics.com/api/notify-crawl
 
 # Optional: With Authentication
-POST https://www.extractpics.com/api/notify-crawl
+POST https://extractpics.com/api/notify-crawl
 Authorization: Bearer YOUR_SECRET
 
 # Check Configuration Status
-GET https://www.extractpics.com/api/notify-crawl
+GET https://extractpics.com/api/notify-crawl
 ```
 
 ### Key URLs
 
 ```
-Sitemap:    https://www.extractpics.com/sitemap.xml
-Key File:   https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
-API Status: https://www.extractpics.com/api/notify-crawl (GET)
+Sitemap:    https://extractpics.com/sitemap.xml
+Key File:   https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+API Status: https://extractpics.com/api/notify-crawl (GET)
 ```
 
 ---
@@ -346,13 +346,13 @@ curl -X POST http://localhost:3000/api/notify-crawl | jq
 git push
 
 # Test key file
-curl https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+curl https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
 
 # Trigger IndexNow
-curl -X POST https://www.extractpics.com/api/notify-crawl | jq
+curl -X POST https://extractpics.com/api/notify-crawl | jq
 
 # View sitemap
-curl https://www.extractpics.com/sitemap.xml | head -50
+curl https://extractpics.com/sitemap.xml | head -50
 ```
 
 ### Adding New Image
@@ -369,7 +369,7 @@ git commit -m "Add new infographic: [title]"
 git push
 
 # 4. Notify search engines
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 ```
 
 ---

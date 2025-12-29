@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Download Pictures - Free Bulk Picture Downloader",
         description: "Download pictures from any website in bulk. Save multiple images at once with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/download-pictures",
+        url: "https://extractpics.com/download-pictures",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-pictures.png",
+                url: "https://extractpics.com/og-image-download-pictures.png",
                 width: 1200,
                 height: 630,
                 alt: "Download Pictures - Bulk Picture Downloader"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Download Pictures - Free Bulk Picture Downloader",
         description: "Download pictures from any website in bulk. Fast and free.",
-        images: ["https://www.extractpics.com/og-image-download-pictures.png"],
+        images: ["https://extractpics.com/og-image-download-pictures.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/download-pictures",
+        canonical: "https://extractpics.com/download-pictures",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function DownloadPicturesPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The best way to <strong className="text-foreground">download pictures</strong> from any website. Save multiple images at once in bulk. Fast, secure, and completely free. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The best way to <strong className="text-foreground">download pictures</strong> from any website. Save multiple images at once in bulk. Fast, secure, and completely free. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -325,7 +325,7 @@ export default function DownloadPicturesPage() {
                         Ready to Download Pictures?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start downloading pictures now with <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">download pictures</a> tool. No registration, completely free.
+                        Start downloading pictures now with <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">download pictures</a> tool. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Web Photo Downloader - Download Photos from Any Website Free",
         description: "Free web photo downloader tool to download photos from any website instantly. Extract and save all photos in bulk.",
         type: "website",
-        url: "https://www.extractpics.com/web-photo-downloader",
+        url: "https://extractpics.com/web-photo-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Web Photo Downloader - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Web Photo Downloader - Download Photos from Any Website Free",
         description: "Free web photo downloader tool to download photos from any website instantly. Extract and save all photos in bulk.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/web-photo-downloader",
+        canonical: "https://extractpics.com/web-photo-downloader",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function WebPhotoDownloaderPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The most powerful <strong className="text-foreground">web photo downloader</strong> to extract and save photos from any website. Download individually or in bulk with our free tool. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The most powerful <strong className="text-foreground">web photo downloader</strong> to extract and save photos from any website. Download individually or in bulk with our free tool. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -266,7 +266,7 @@ export default function WebPhotoDownloaderPage() {
                                 The Smart Way to Download Photos from Websites
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading photos are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">web photo downloader</a> automates the entire process, saving you time while ensuring original quality.
+                                Traditional methods of downloading photos are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">web photo downloader</a> automates the entire process, saving you time while ensuring original quality.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download photos in original quality" />
@@ -325,7 +325,7 @@ export default function WebPhotoDownloaderPage() {
                         Ready to Download Photos from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">web photo downloader</a> now. No registration, completely free.
+                        Start using our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">web photo downloader</a> now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

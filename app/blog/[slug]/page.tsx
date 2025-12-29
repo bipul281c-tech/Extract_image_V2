@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.extractpics.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://extractpics.com";
 
   return {
     title: post.title,
@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: Props) {
   }
 
   const related = await getRelatedPosts(slug, post.category);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.extractpics.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://extractpics.com";
 
   // Compile and run MDX
   const compiled = await compile(post.content, {

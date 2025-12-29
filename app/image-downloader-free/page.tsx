@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Image Downloader Free - Download Images from Any Website",
         description: "Free image downloader tool to download images from any website instantly. Extract and save images in bulk. 100% free forever.",
         type: "website",
-        url: "https://www.extractpics.com/image-downloader-free",
+        url: "https://extractpics.com/image-downloader-free",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-image-downloader-free.png",
+                url: "https://extractpics.com/og-image-image-downloader-free.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Downloader Free - Download Images from Any Website"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Downloader Free - Download Images from Any Website",
         description: "Free image downloader tool to download images from any website instantly. 100% free forever.",
-        images: ["https://www.extractpics.com/og-image-image-downloader-free.png"],
+        images: ["https://extractpics.com/og-image-image-downloader-free.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-downloader-free",
+        canonical: "https://extractpics.com/image-downloader-free",
     },
     robots: {
         index: true,
@@ -152,7 +152,7 @@ export default function ImageDownloaderFreePage() {
                         Why Choose Our Free Image Downloader?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        The most powerful <Link href="https://www.extractpics.com/" className="text-primary hover:underline">image downloader free</Link> tool with premium features at zero cost.
+                        The most powerful <Link href="https://extractpics.com/" className="text-primary hover:underline">image downloader free</Link> tool with premium features at zero cost.
                     </p>
                 </div>
 
@@ -230,7 +230,7 @@ export default function ImageDownloaderFreePage() {
                             The Best Free Image Downloader Online
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Unlike other tools that charge for premium features, our <Link href="https://www.extractpics.com/" className="text-primary hover:underline">image downloader</Link> is completely free with no limitations. Get all the features you need without spending a dime.
+                            Unlike other tools that charge for premium features, our <Link href="https://extractpics.com/" className="text-primary hover:underline">image downloader</Link> is completely free with no limitations. Get all the features you need without spending a dime.
                         </p>
                         <div className="space-y-4">
                             <BenefitItem text="Download unlimited images for free" />
@@ -329,7 +329,7 @@ export default function ImageDownloaderFreePage() {
                         Start Downloading Images for Free Now
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Join thousands of users who trust our <Link href="https://www.extractpics.com/" className="text-primary hover:underline">free image downloader</Link>. No registration, no limits, completely free forever.
+                        Join thousands of users who trust our <Link href="https://extractpics.com/" className="text-primary hover:underline">free image downloader</Link>. No registration, no limits, completely free forever.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

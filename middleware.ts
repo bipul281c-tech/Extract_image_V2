@@ -5,10 +5,10 @@ export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone()
   const hostname = request.headers.get('host') || ''
 
-  // Canonical URL: www.extractpics.com
-  // Redirect non-www to www
-  if (hostname === 'extractpics.com') {
-    url.host = 'www.extractpics.com'
+  // Canonical URL: extractpics.com (non-www)
+  // Redirect www to non-www
+  if (hostname === 'www.extractpics.com') {
+    url.host = 'extractpics.com'
     return NextResponse.redirect(url, 301) // Permanent redirect
   }
 

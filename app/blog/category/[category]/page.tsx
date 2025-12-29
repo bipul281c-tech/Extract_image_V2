@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category } = await params;
   const title = category.charAt(0).toUpperCase() + category.slice(1);
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.extractpics.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://extractpics.com";
 
   return {
     title: `${title} - ExtractPics Blog`,
@@ -53,7 +53,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
   const allCategories = await getAllCategories();
   const categoryCounts = await getCategoryCounts();
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.extractpics.com";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://extractpics.com";
 
   const categoryTitle =
     category.charAt(0).toUpperCase() + category.slice(1);

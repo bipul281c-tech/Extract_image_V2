@@ -10,11 +10,11 @@ export const metadata: Metadata = {
         title: "About Boopul | AI Creator & No-Code Explorer",
         description: "Learn about Boopul - an AI-powered creator, no-code explorer, and disciplined builder focused on AI workflows, automation, and personal development.",
         type: "website",
-        url: "https://www.extractpics.com/about",
+        url: "https://extractpics.com/about",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-about.png",
+                url: "https://extractpics.com/og-image-about.png",
                 width: 1200,
                 height: 630,
                 alt: "About Boopul - AI Creator & No-Code Explorer"
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "About Boopul | AI Creator & No-Code Explorer",
         description: "Learn about Boopul - an AI-powered creator, no-code explorer, and disciplined builder.",
-        images: ["https://www.extractpics.com/og-image-about.png"],
+        images: ["https://extractpics.com/og-image-about.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/about",
+        canonical: "https://extractpics.com/about",
     },
     robots: {
         index: true,

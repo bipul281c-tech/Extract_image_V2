@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "ExtractPics - Free Image Extractor & Downloader Tool",
         description: "Extract and download images from any website instantly. Free, fast, and secure image extraction tool.",
         type: "website",
-        url: "https://www.extractpics.com/",
+        url: "https://extractpics.com/",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image.png",
+                url: "https://extractpics.com/og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "ExtractPics - Free Image Extractor Tool"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "ExtractPics - Free Image Extractor & Downloader",
         description: "Extract and download images from any website instantly. Free image extraction tool.",
-        images: ["https://www.extractpics.com/og-image.png"],
+        images: ["https://extractpics.com/og-image.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/",
+        canonical: "https://extractpics.com/",
     },
     robots: {
         index: true,
@@ -62,7 +62,7 @@ export default function Page() {
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "ExtractPics",
-        "url": "https://www.extractpics.com",
+        "url": "https://extractpics.com",
         "description": "Extract and download images from any website instantly. Free bulk image extractor supporting all formats.",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
@@ -86,7 +86,7 @@ export default function Page() {
             "ZIP archive download",
             "No registration required"
         ],
-        "screenshot": "https://www.extractpics.com/screenshot-wide.png",
+        "screenshot": "https://extractpics.com/screenshot-wide.png",
         "browserRequirements": "Requires JavaScript. Requires HTML5."
     };
 
@@ -95,8 +95,8 @@ export default function Page() {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "ExtractPics",
-        "url": "https://www.extractpics.com",
-        "logo": "https://www.extractpics.com/logo.png",
+        "url": "https://extractpics.com",
+        "logo": "https://extractpics.com/logo.png",
         "description": "Free image extraction tool for downloading images from any website",
         "sameAs": []
     };
@@ -108,7 +108,7 @@ export default function Page() {
         "itemListElement": [
             {
                 "@type": "SiteLinkSearchBox",
-                "url": "https://www.extractpics.com",
+                "url": "https://extractpics.com",
                 "name": "ExtractPics Image Extractor",
             },
             {
@@ -116,42 +116,42 @@ export default function Page() {
                 "position": 1,
                 "name": "Image Extractor Tool",
                 "description": "Extract and download images from any website",
-                "url": "https://www.extractpics.com/"
+                "url": "https://extractpics.com/"
             },
             {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Bulk Image Extractor",
                 "description": "Extract images from multiple websites at once",
-                "url": "https://www.extractpics.com/bulk-extractor"
+                "url": "https://extractpics.com/bulk-extractor"
             },
             {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "Image Downloader",
                 "description": "Download images from any website",
-                "url": "https://www.extractpics.com/image-downloader"
+                "url": "https://extractpics.com/image-downloader"
             },
             {
                 "@type": "ListItem",
                 "position": 4,
                 "name": "About ExtractPics",
                 "description": "Learn more about our free image extraction tool",
-                "url": "https://www.extractpics.com/about"
+                "url": "https://extractpics.com/about"
             },
             {
                 "@type": "ListItem",
                 "position": 5,
                 "name": "Infographics",
                 "description": "Visual guides and infographics for image extraction",
-                "url": "https://www.extractpics.com/infographics"
+                "url": "https://extractpics.com/infographics"
             },
             {
                 "@type": "ListItem",
                 "position": 6,
                 "name": "How to Get Image URL",
                 "description": "Learn how to get URLs from images",
-                "url": "https://www.extractpics.com/how-to-get-an-image-url"
+                "url": "https://extractpics.com/how-to-get-an-image-url"
             }
         ]
     };
@@ -165,7 +165,7 @@ export default function Page() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.extractpics.com"
+                "item": "https://extractpics.com"
             }
         ]
     };

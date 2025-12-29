@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Download Image from Website - Free Image Extractor Tool",
         description: "Download image from website instantly. Extract and save images from any webpage with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/download-image-from-website",
+        url: "https://extractpics.com/download-image-from-website",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Download Image from Website - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Download Image from Website - Free Image Extractor Tool",
         description: "Download image from website instantly. Extract and save images from any webpage with our free tool.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/download-image-from-website",
+        canonical: "https://extractpics.com/download-image-from-website",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function DownloadImageFromWebsitePage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The simplest way to <strong className="text-foreground">download image from website</strong>. Extract and save images from any webpage instantly. Download individually or in bulk. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The simplest way to <strong className="text-foreground">download image from website</strong>. Extract and save images from any webpage instantly. Download individually or in bulk. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -266,7 +266,7 @@ export default function DownloadImageFromWebsitePage() {
                                 The Best Way to Download Image from Website
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods are slow and tedious. Our tool to <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">download image from website</a> automates the process, saving time while ensuring original quality.
+                                Traditional methods are slow and tedious. Our tool to <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">download image from website</a> automates the process, saving time while ensuring original quality.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download images in original quality" />
@@ -325,7 +325,7 @@ export default function DownloadImageFromWebsitePage() {
                         Ready to Download Image from Website?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a> to download image from website now. No registration, completely free.
+                        Start using <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a> to download image from website now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

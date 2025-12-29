@@ -21,7 +21,7 @@ function getLatestImageDate(images: SEOImage[]): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://extractpics.com'
   const currentDate = new Date()
 
   // Extract image URLs from seo-images.json

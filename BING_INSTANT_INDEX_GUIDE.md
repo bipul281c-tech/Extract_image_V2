@@ -22,7 +22,7 @@ Follow these exact steps to enable instant indexing on Bing for your infographic
 ## Step 2: Add Your Website (1 min)
 
 1. Click **"Add a site"** button
-2. Enter: `https://www.extractpics.com`
+2. Enter: `https://extractpics.com`
 3. Click **"Add"**
 
 ---
@@ -92,7 +92,7 @@ After verification:
 
 1. In Bing Webmaster, go to **"Sitemaps"** (left sidebar)
 2. Click **"Submit a sitemap"**
-3. Enter: `https://www.extractpics.com/sitemap.xml`
+3. Enter: `https://extractpics.com/sitemap.xml`
 4. Click **"Submit"**
 
 **Expected Result:**
@@ -112,7 +112,7 @@ You don't need to do anything special in Bing - IndexNow is already configured!
 
 ```bash
 # Trigger instant notification to Bing
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 ```
 
 **Response:**
@@ -156,7 +156,7 @@ git commit -m "Add new infographic"
 git push
 
 # 4. Trigger instant indexing (THIS IS THE MAGIC!)
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 ```
 
 ### What Happens:
@@ -188,7 +188,7 @@ After completing steps 1-5:
    - [ ] Your sitemap URL listed
 
 4. **URL Inspection**
-   - [ ] Enter: `https://www.extractpics.com/infographics`
+   - [ ] Enter: `https://extractpics.com/infographics`
    - [ ] Status: "URL is on Bing" (may take 24h)
 
 ---
@@ -240,7 +240,7 @@ Add content → Call API → Bing notified instantly → 1-3 days to index
 **Check:**
 ```bash
 # Test the API
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # Should return: "indexNow": {"status": "success"}
 ```
@@ -273,7 +273,7 @@ curl -X POST https://www.extractpics.com/api/notify-crawl
 **XML File Method:**
 - Ensure file is in `/public/BingSiteAuth.xml`
 - Deploy to production
-- File must be accessible at: `https://www.extractpics.com/BingSiteAuth.xml`
+- File must be accessible at: `https://extractpics.com/BingSiteAuth.xml`
 - Wait 5 minutes after deployment
 
 **Meta Tag Method:**
@@ -307,7 +307,7 @@ jobs:
       - name: Trigger IndexNow
         run: |
           echo "Notifying Bing of new content..."
-          response=$(curl -s -X POST https://www.extractpics.com/api/notify-crawl)
+          response=$(curl -s -X POST https://extractpics.com/api/notify-crawl)
           echo "$response"
 
           # Check success
@@ -347,19 +347,19 @@ jobs:
 
 ### Essential URLs
 - **Bing Webmaster**: https://www.bing.com/webmasters
-- **Your Sitemap**: https://www.extractpics.com/sitemap.xml
-- **Trigger Indexing**: `curl -X POST https://www.extractpics.com/api/notify-crawl`
+- **Your Sitemap**: https://extractpics.com/sitemap.xml
+- **Trigger Indexing**: `curl -X POST https://extractpics.com/api/notify-crawl`
 
 ### Common Commands
 ```bash
 # Notify Bing of changes
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # Check sitemap
-curl https://www.extractpics.com/sitemap.xml | grep "image:loc"
+curl https://extractpics.com/sitemap.xml | grep "image:loc"
 
 # Check API status
-curl https://www.extractpics.com/api/notify-crawl | jq
+curl https://extractpics.com/api/notify-crawl | jq
 ```
 
 ### Support

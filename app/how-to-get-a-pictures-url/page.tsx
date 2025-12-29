@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "How to Get a Pictures URL - Extract Image URLs Instantly",
         description: "Learn how to get a pictures URL from any website. Free tool to extract and copy image URLs instantly.",
         type: "website",
-        url: "https://www.extractpics.com/how-to-get-a-pictures-url",
+        url: "https://extractpics.com/how-to-get-a-pictures-url",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-picture-url.png",
+                url: "https://extractpics.com/og-image-picture-url.png",
                 width: 1200,
                 height: 630,
                 alt: "How to Get a Pictures URL - Tutorial"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "How to Get a Pictures URL - Extract Image URLs Instantly",
         description: "Learn how to get a pictures URL from any website. Free and easy.",
-        images: ["https://www.extractpics.com/og-image-picture-url.png"],
+        images: ["https://extractpics.com/og-image-picture-url.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/how-to-get-a-pictures-url",
+        canonical: "https://extractpics.com/how-to-get-a-pictures-url",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function HowToGetPicturesUrlPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            Learn <strong className="text-foreground">how to get a pictures URL</strong> from any website instantly. Extract and copy image URLs with our free tool. No technical knowledge required. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            Learn <strong className="text-foreground">how to get a pictures URL</strong> from any website instantly. Extract and copy image URLs with our free tool. No technical knowledge required. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -325,7 +325,7 @@ export default function HowToGetPicturesUrlPage() {
                         Ready to Get Pictures URLs?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Learn <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">how to get a pictures URL</a> with our free tool. Extract and copy image URLs instantly.
+                        Learn <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">how to get a pictures URL</a> with our free tool. Extract and copy image URLs instantly.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconLink size={20} />

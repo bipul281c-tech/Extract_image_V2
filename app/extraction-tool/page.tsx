@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Extraction Tool - Premium Web Image Extractor",
         description: "Capture and download images from any website with our premium extraction tool. Free, fast, and secure.",
         type: "website",
-        url: "https://www.extractpics.com/extraction-tool",
+        url: "https://extractpics.com/extraction-tool",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-extraction-tool.png",
+                url: "https://extractpics.com/og-image-extraction-tool.png",
                 width: 1200,
                 height: 630,
                 alt: "Extraction Tool - Premium Web Image Extractor"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Extraction Tool - Premium Web Image Extractor",
         description: "Capture and download images from any website with our premium extraction tool.",
-        images: ["https://www.extractpics.com/og-image-extraction-tool.png"],
+        images: ["https://extractpics.com/og-image-extraction-tool.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/extraction-tool",
+        canonical: "https://extractpics.com/extraction-tool",
     },
     robots: {
         index: true,
@@ -131,7 +131,7 @@ export default function ExtractionToolPage() {
                         <p className="text-foreground font-medium flex items-center justify-center gap-2">
                             Looking for more tools? Visit our main site at
                             <a
-                                href="https://www.extractpics.com/"
+                                href="https://extractpics.com/"
                                 className="text-primary hover:underline flex items-center gap-1 font-bold"
                             >
                                 ExtractPics.com <IconExternalLink size={16} />

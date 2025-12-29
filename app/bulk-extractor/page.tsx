@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         title: "Bulk Extractor - Extract Images from Multiple Websites",
         description: "Extract and download images from multiple websites simultaneously with our powerful bulk extractor tool. Free, fast, and secure.",
         type: "website",
-        url: "https://www.extractpics.com/bulk-extractor",
+        url: "https://extractpics.com/bulk-extractor",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-bulk-extractor.png",
+                url: "https://extractpics.com/og-image-bulk-extractor.png",
                 width: 1200,
                 height: 630,
                 alt: "Bulk Extractor - Extract Images from Multiple Websites"
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Bulk Extractor - Extract Images from Multiple Websites",
         description: "Extract and download images from multiple websites simultaneously with our powerful bulk extractor tool.",
-        images: ["https://www.extractpics.com/og-image-bulk-extractor.png"],
+        images: ["https://extractpics.com/og-image-bulk-extractor.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/bulk-extractor",
+        canonical: "https://extractpics.com/bulk-extractor",
     },
     robots: {
         index: true,

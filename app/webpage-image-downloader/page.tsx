@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Webpage Image Downloader - Download Images from Web Pages",
         description: "Download images from any webpage with our free webpage image downloader. Extract and save images from web pages in bulk.",
         type: "website",
-        url: "https://www.extractpics.com/webpage-image-downloader",
+        url: "https://extractpics.com/webpage-image-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-webpage-image-downloader.png",
+                url: "https://extractpics.com/og-image-webpage-image-downloader.png",
                 width: 1200,
                 height: 630,
                 alt: "Webpage Image Downloader - Free Web Page Image Extractor"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Webpage Image Downloader - Download Images from Web Pages",
         description: "Download images from any webpage with our free webpage image downloader. Extract and save images in bulk.",
-        images: ["https://www.extractpics.com/og-image-webpage-image-downloader.png"],
+        images: ["https://extractpics.com/og-image-webpage-image-downloader.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/webpage-image-downloader",
+        canonical: "https://extractpics.com/webpage-image-downloader",
     },
     robots: {
         index: true,
@@ -270,7 +270,7 @@ export default function WebpageImageDownloaderPage() {
                                 The Best Webpage Image Downloader
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading images from web pages are slow and tedious. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">webpage image downloader</Link> automates the entire process, saving you time and effort.
+                                Traditional methods of downloading images from web pages are slow and tedious. Our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">webpage image downloader</Link> automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download images in original quality" />
@@ -329,7 +329,7 @@ export default function WebpageImageDownloaderPage() {
                         Ready to Download Images from Web Pages?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">webpage image downloader</Link> now. No registration, no downloads, completely free.
+                        Start using our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">webpage image downloader</Link> now. No registration, no downloads, completely free.
                     </p>
                     <Link href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

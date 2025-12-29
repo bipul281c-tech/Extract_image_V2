@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Link Picture - Extract & Download Images from URLs",
         description: "Extract pictures from links instantly. Free tool to download images from any URL or website.",
         type: "website",
-        url: "https://www.extractpics.com/link-picture",
+        url: "https://extractpics.com/link-picture",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-link-picture.png",
+                url: "https://extractpics.com/og-image-link-picture.png",
                 width: 1200,
                 height: 630,
                 alt: "Link Picture - Extract & Download Images from URLs"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Link Picture - Extract & Download Images from URLs",
         description: "Extract pictures from links instantly. Free tool to download images from any URL.",
-        images: ["https://www.extractpics.com/og-image-link-picture.png"],
+        images: ["https://extractpics.com/og-image-link-picture.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/link-picture",
+        canonical: "https://extractpics.com/link-picture",
     },
     robots: {
         index: true,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const faqItems = [
     {
         question: "How do I get a picture from a link?",
-        answer: "Simply paste the URL or link into our tool and click scan. Our link picture extractor will automatically extract all pictures from the URL. You can then preview and download the images you need. Visit https://www.extractpics.com/ for more picture extraction tools."
+        answer: "Simply paste the URL or link into our tool and click scan. Our link picture extractor will automatically extract all pictures from the URL. You can then preview and download the images you need. Visit https://extractpics.com/ for more picture extraction tools."
     },
     {
         question: "Can I extract multiple pictures from one link?",
@@ -148,7 +148,7 @@ export default function LinkPicturePage() {
                         Why Use Our Link Picture Tool?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Extract pictures from any link with ease. Fast, secure, and completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Extract pictures from any link with ease. Fast, secure, and completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                 </div>
 
@@ -266,7 +266,7 @@ export default function LinkPicturePage() {
                                 Extract Pictures from Links the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of saving pictures from links are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">link picture extractor</a> automates the entire process, saving you valuable time and effort.
+                                Traditional methods of saving pictures from links are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">link picture extractor</a> automates the entire process, saving you valuable time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Extract pictures in original quality" />
@@ -325,7 +325,7 @@ export default function LinkPicturePage() {
                         Ready to Extract Pictures from Links?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start extracting pictures from any link now. No registration, no downloads, completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Start extracting pictures from any link now. No registration, no downloads, completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

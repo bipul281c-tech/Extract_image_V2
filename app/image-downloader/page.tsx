@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         title: "Image Downloader - Free Online Tool to Download Images",
         description: "Download images from any website instantly. Extract and save images in bulk with our free image downloader tool.",
         type: "website",
-        url: "https://www.extractpics.com/image-downloader",
+        url: "https://extractpics.com/image-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-image-downloader.png",
+                url: "https://extractpics.com/og-image-image-downloader.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Downloader - Free Online Tool"
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Downloader - Free Online Tool",
         description: "Download images from any website instantly. Extract and save images in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-image-downloader.png"],
+        images: ["https://extractpics.com/og-image-image-downloader.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-downloader",
+        canonical: "https://extractpics.com/image-downloader",
     },
     robots: {
         index: true,
@@ -283,7 +283,7 @@ export default function ImageDownloaderPage() {
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
                                 Traditional methods of downloading images are slow and tedious. Our image downloader automates the entire process, making it the fastest way to save images from any website. Experience the power of{" "}
-                                <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">
+                                <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">
                                     ExtractPics.com
                                 </Link>
                                 .
@@ -353,7 +353,7 @@ export default function ImageDownloaderPage() {
 
                         <p>
                             Visit{" "}
-                            <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">
+                            <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">
                                 ExtractPics.com
                             </Link>{" "}
                             for the most reliable <strong className="text-foreground">image downloader</strong> experience. Our platform is trusted by designers, marketers, researchers, and content creators worldwide for its speed, reliability, and ease of use.
@@ -385,7 +385,7 @@ export default function ImageDownloaderPage() {
 
                         <p>
                             Start using the best <strong className="text-foreground">image downloader</strong> today at{" "}
-                            <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">
+                            <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">
                                 ExtractPics.com
                             </Link>
                             . No registration, no installation, completely free forever.
@@ -409,7 +409,7 @@ export default function ImageDownloaderPage() {
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
                         Download images from any website instantly with the most powerful image downloader available. Visit{" "}
-                        <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">
+                        <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">
                             ExtractPics.com
                         </Link>{" "}
                         for the best experience.

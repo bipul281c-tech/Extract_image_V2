@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Web Image Download - Free Web Image Downloader Tool",
         description: "Web image download made easy. Download images from any web page instantly with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/web-image-download",
+        url: "https://extractpics.com/web-image-download",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-web-download.png",
+                url: "https://extractpics.com/og-image-web-download.png",
                 width: 1200,
                 height: 630,
                 alt: "Web Image Download - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Web Image Download - Free Web Image Downloader Tool",
         description: "Web image download made easy. Download images from any web page instantly with our free tool.",
-        images: ["https://www.extractpics.com/og-image-web-download.png"],
+        images: ["https://extractpics.com/og-image-web-download.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/web-image-download",
+        canonical: "https://extractpics.com/web-image-download",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function WebImageDownloadPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The ultimate <strong className="text-foreground">web image download</strong> tool. Extract and download images from any web page in seconds. Download individually or in bulk as a ZIP file. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The ultimate <strong className="text-foreground">web image download</strong> tool. Extract and download images from any web page in seconds. Download individually or in bulk as a ZIP file. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -325,7 +325,7 @@ export default function WebImageDownloadPage() {
                         Ready for Web Image Download?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start web image download now with <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>. No registration, completely free.
+                        Start web image download now with <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

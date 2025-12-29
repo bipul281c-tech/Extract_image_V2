@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Image Extraction Tool - Extract Images from Any Website",
         description: "Advanced image extraction tool to extract images from any website instantly. Extract all formats, filter by size, and download in bulk.",
         type: "website",
-        url: "https://www.extractpics.com/image-extraction",
+        url: "https://extractpics.com/image-extraction",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-extraction.png",
+                url: "https://extractpics.com/og-image-extraction.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Extraction Tool - Free Online"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Extraction Tool - Extract Images from Any Website",
         description: "Advanced image extraction tool to extract images from any website instantly. Free and secure.",
-        images: ["https://www.extractpics.com/og-image-extraction.png"],
+        images: ["https://extractpics.com/og-image-extraction.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-extraction",
+        canonical: "https://extractpics.com/image-extraction",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function ImageExtractionPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            Powerful <strong className="text-foreground">image extraction</strong> technology to extract all images from any website. Advanced scanning, smart filtering, and bulk download capabilities. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            Powerful <strong className="text-foreground">image extraction</strong> technology to extract all images from any website. Advanced scanning, smart filtering, and bulk download capabilities. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -325,7 +325,7 @@ export default function ImageExtractionPage() {
                         Start Extracting Images Now
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Use our advanced <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image extraction</a> tool to extract images from any website. No registration, completely free.
+                        Use our advanced <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image extraction</a> tool to extract images from any website. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

@@ -56,7 +56,7 @@ curl -X POST http://localhost:3000/api/notify-crawl
 
 **b) Add Your Website**
 1. Click "Add a site"
-2. Enter: `https://www.extractpics.com`
+2. Enter: `https://extractpics.com`
 3. Click "Add"
 
 **c) Verify Ownership**
@@ -95,7 +95,7 @@ Once verified:
 
 1. Navigate to: **Sitemaps** in left sidebar
 2. Click "Submit a sitemap"
-3. Enter: `https://www.extractpics.com/sitemap.xml`
+3. Enter: `https://extractpics.com/sitemap.xml`
 4. Click "Submit"
 
 **Bing will now:**
@@ -118,7 +118,7 @@ Once verified:
 
 ```bash
 # Trigger IndexNow notification
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # Expected response
 {
@@ -131,7 +131,7 @@ curl -X POST https://www.extractpics.com/api/notify-crawl
       "error": null
     }
   },
-  "sitemapUrl": "https://www.extractpics.com/sitemap.xml"
+  "sitemapUrl": "https://extractpics.com/sitemap.xml"
 }
 ```
 
@@ -140,7 +140,7 @@ curl -X POST https://www.extractpics.com/api/notify-crawl
 **Check Submission Status:**
 
 1. Go to: **URL Inspection**
-2. Enter: `https://www.extractpics.com/infographics`
+2. Enter: `https://extractpics.com/infographics`
 3. Check "Index Status"
 
 **Monitor API Submissions:**
@@ -171,7 +171,7 @@ Trigger IndexNow notification whenever you:
 
 **Method 1: Manual API Call**
 ```bash
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 ```
 
 **Method 2: Automated (GitHub Actions)**
@@ -195,7 +195,7 @@ jobs:
     steps:
       - name: Trigger IndexNow
         run: |
-          response=$(curl -s -X POST https://www.extractpics.com/api/notify-crawl)
+          response=$(curl -s -X POST https://extractpics.com/api/notify-crawl)
           echo "Response: $response"
 
           # Check if successful
@@ -213,7 +213,7 @@ If you have an admin panel or CMS, call the API after content updates:
 
 ```typescript
 async function notifySearchEngines() {
-  const response = await fetch('https://www.extractpics.com/api/notify-crawl', {
+  const response = await fetch('https://extractpics.com/api/notify-crawl', {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${process.env.NOTIFY_CRAWL_SECRET}` // Optional
@@ -259,7 +259,7 @@ async function notifySearchEngines() {
 
 4. **Trigger IndexNow** (automatic if using GitHub Actions, or manual):
    ```bash
-   curl -X POST https://www.extractpics.com/api/notify-crawl
+   curl -X POST https://extractpics.com/api/notify-crawl
    ```
 
 5. **Verify in Bing Webmaster Tools**
@@ -347,7 +347,7 @@ async function notifySearchEngines() {
 
 2. **Verify Key File**
    ```bash
-   curl https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+   curl https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
    ```
    Should return: `a96c4f160eaf78715f1387717333cddb`
 
@@ -362,10 +362,10 @@ async function notifySearchEngines() {
    curl -X POST "https://api.indexnow.org/indexnow" \
      -H "Content-Type: application/json" \
      -d '{
-       "host": "www.extractpics.com",
+       "host": "extractpics.com",
        "key": "a96c4f160eaf78715f1387717333cddb",
-       "keyLocation": "https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt",
-       "urlList": ["https://www.extractpics.com/sitemap.xml"]
+       "keyLocation": "https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt",
+       "urlList": ["https://extractpics.com/sitemap.xml"]
      }'
    ```
 
@@ -376,7 +376,7 @@ async function notifySearchEngines() {
 **Solutions:**
 
 1. **Check Robots.txt**
-   - Visit: https://www.extractpics.com/robots.txt
+   - Visit: https://extractpics.com/robots.txt
    - Ensure: `User-agent: bingbot` is `Allow: /`
    - Verify: Sitemap is referenced
 
@@ -388,7 +388,7 @@ async function notifySearchEngines() {
    Should return: `200 OK`
 
 3. **Check Sitemap**
-   - Visit: https://www.extractpics.com/sitemap.xml
+   - Visit: https://extractpics.com/sitemap.xml
    - Verify images are in `<image:image>` tags
    - Check image URLs are correct
 
@@ -409,7 +409,7 @@ async function notifySearchEngines() {
 
 1. **XML File Method:**
    - Ensure file is in `/public/BingSiteAuth.xml`
-   - Accessible at: `https://www.extractpics.com/BingSiteAuth.xml`
+   - Accessible at: `https://extractpics.com/BingSiteAuth.xml`
    - Deploy to production before verifying
 
 2. **Meta Tag Method:**
@@ -456,7 +456,7 @@ NOTIFY_CRAWL_SECRET=your_generated_secret_here
 
 **4. Use in API Calls**
 ```bash
-curl -X POST https://www.extractpics.com/api/notify-crawl \
+curl -X POST https://extractpics.com/api/notify-crawl \
   -H "Authorization: Bearer your_secret_here"
 ```
 
@@ -467,18 +467,18 @@ Submit multiple URLs at once:
 ```typescript
 // Custom script to submit multiple URLs
 const urls = [
-  'https://www.extractpics.com/infographics',
-  'https://www.extractpics.com/about',
-  'https://www.extractpics.com/'
+  'https://extractpics.com/infographics',
+  'https://extractpics.com/about',
+  'https://extractpics.com/'
 ];
 
 const response = await fetch('https://api.indexnow.org/indexnow', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
-    host: 'www.extractpics.com',
+    host: 'extractpics.com',
     key: 'a96c4f160eaf78715f1387717333cddb',
-    keyLocation: 'https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt',
+    keyLocation: 'https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt',
     urlList: urls
   })
 });
@@ -563,9 +563,9 @@ grep -i "indexnow" logs.txt
 ```
 API Key:      a96c4f160eaf78715f1387717333cddb
 Key File:     /public/a96c4f160eaf78715f1387717333cddb.txt
-Key URL:      https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
-Sitemap:      https://www.extractpics.com/sitemap.xml
-API Endpoint: https://www.extractpics.com/api/notify-crawl
+Key URL:      https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+Sitemap:      https://extractpics.com/sitemap.xml
+API Endpoint: https://extractpics.com/api/notify-crawl
 ```
 
 ### Common Commands
@@ -576,11 +576,11 @@ curl http://localhost:3000/a96c4f160eaf78715f1387717333cddb.txt
 curl -X POST http://localhost:3000/api/notify-crawl
 
 # Production
-curl https://www.extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl https://extractpics.com/a96c4f160eaf78715f1387717333cddb.txt
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # With authentication
-curl -X POST https://www.extractpics.com/api/notify-crawl \
+curl -X POST https://extractpics.com/api/notify-crawl \
   -H "Authorization: Bearer YOUR_SECRET"
 ```
 

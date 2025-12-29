@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Web Pic Downloader - Download Pictures from Any Website Free",
         description: "Free web pic downloader tool to download pictures from any website instantly. Extract and save all images in bulk.",
         type: "website",
-        url: "https://www.extractpics.com/web-pic-downloader",
+        url: "https://extractpics.com/web-pic-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Web Pic Downloader - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Web Pic Downloader - Download Pictures from Any Website Free",
         description: "Free web pic downloader tool to download pictures from any website instantly. Extract and save all images in bulk.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/web-pic-downloader",
+        canonical: "https://extractpics.com/web-pic-downloader",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function WebPicDownloaderPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The most powerful <strong className="text-foreground">web pic downloader</strong> to extract and save pictures from any website. Download individually or in bulk with our free tool. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The most powerful <strong className="text-foreground">web pic downloader</strong> to extract and save pictures from any website. Download individually or in bulk with our free tool. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -266,7 +266,7 @@ export default function WebPicDownloaderPage() {
                                 The Smart Way to Download Pictures from Websites
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading pictures are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">web pic downloader</a> automates the entire process, saving you time while ensuring original quality.
+                                Traditional methods of downloading pictures are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">web pic downloader</a> automates the entire process, saving you time while ensuring original quality.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download pictures in original quality" />
@@ -325,7 +325,7 @@ export default function WebPicDownloaderPage() {
                         Ready to Download Pictures from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">web pic downloader</a> now. No registration, completely free.
+                        Start using our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">web pic downloader</a> now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

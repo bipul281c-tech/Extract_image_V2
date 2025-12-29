@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Download Image - Free Image Downloader Tool",
         description: "Download images from any website instantly. Extract and save images in bulk with our free image downloader tool.",
         type: "website",
-        url: "https://www.extractpics.com/download-image",
+        url: "https://extractpics.com/download-image",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-image.png",
+                url: "https://extractpics.com/og-image-download-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Download Image - Free Image Downloader Tool"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Download Image - Free Image Downloader Tool",
         description: "Download images from any website instantly. Extract and save images in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-download-image.png"],
+        images: ["https://extractpics.com/og-image-download-image.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/download-image",
+        canonical: "https://extractpics.com/download-image",
     },
     robots: {
         index: true,

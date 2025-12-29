@@ -12,7 +12,7 @@ function escapeXml(str: string): string {
 export async function GET() {
   const posts = await getAllPosts();
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || "https://www.extractpics.com";
+    process.env.NEXT_PUBLIC_SITE_URL || "https://extractpics.com";
 
   const rssItems = posts
     .slice(0, 20)

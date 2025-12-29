@@ -109,7 +109,7 @@ open http://localhost:3000/sitemap.xml
 
 4. **Trigger crawl notification**
    ```bash
-   curl -X POST https://www.extractpics.com/api/notify-crawl
+   curl -X POST https://extractpics.com/api/notify-crawl
    ```
 
 Done! Your image is now in the sitemap and search engines are notified.
@@ -173,10 +173,10 @@ Notifies search engines of sitemap updates.
 **Usage:**
 ```bash
 # Without authentication
-curl -X POST https://www.extractpics.com/api/notify-crawl
+curl -X POST https://extractpics.com/api/notify-crawl
 
 # With authentication (if NOTIFY_CRAWL_SECRET is set)
-curl -X POST https://www.extractpics.com/api/notify-crawl \
+curl -X POST https://extractpics.com/api/notify-crawl \
   -H "Authorization: Bearer YOUR_SECRET"
 ```
 
@@ -193,7 +193,7 @@ curl -X POST https://www.extractpics.com/api/notify-crawl \
       "error": null
     }
   },
-  "sitemapUrl": "https://www.extractpics.com/sitemap.xml"
+  "sitemapUrl": "https://extractpics.com/sitemap.xml"
 }
 ```
 
@@ -203,7 +203,7 @@ Check configuration status.
 
 **Usage:**
 ```bash
-curl https://www.extractpics.com/api/notify-crawl
+curl https://extractpics.com/api/notify-crawl
 ```
 
 Returns environment variable status and usage instructions.
@@ -227,7 +227,7 @@ After setup, verify everything works:
 ### Google Search Console
 
 1. Go to: https://search.google.com/search-console
-2. Select: `www.extractpics.com`
+2. Select: `extractpics.com`
 3. Check:
    - **Sitemaps** → Verify last crawl date
    - **Performance** → Filter by "Image" search type
@@ -271,7 +271,7 @@ echo $INDEXNOW_API_KEY
 ls -la public/*.txt
 
 # Test API endpoint
-curl https://www.extractpics.com/api/notify-crawl | jq
+curl https://extractpics.com/api/notify-crawl | jq
 ```
 
 ### Images Not Loading
@@ -308,16 +308,16 @@ grep "r2.cloudflarestorage" next.config.ts
    - Or manually: `vercel --prod`
 
 4. **Verify**:
-   - Visit: https://www.extractpics.com/sitemap.xml
+   - Visit: https://extractpics.com/sitemap.xml
    - Check images appear in XML
-   - Test: `curl -X POST https://www.extractpics.com/api/notify-crawl`
+   - Test: `curl -X POST https://extractpics.com/api/notify-crawl`
 
 ### First-Time Google Setup
 
 1. **Submit sitemap to Google**:
    - Go to Google Search Console
    - Sitemaps → Add new sitemap
-   - Enter: `https://www.extractpics.com/sitemap.xml`
+   - Enter: `https://extractpics.com/sitemap.xml`
    - Click "Submit"
 
 2. **Wait for initial crawl** (24-48 hours)

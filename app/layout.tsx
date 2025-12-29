@@ -25,7 +25,7 @@ import { PwaInstallPrompt } from "@/components/pwa-install-prompt";
 import { EmailCapture } from "@/components/email-capture";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://extractpics.com'),
   title: {
     default: "ExtractPics - Web Image Extractor",
     template: "%s | ExtractPics"
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.extractpics.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL || 'https://extractpics.com',
     siteName: "ExtractPics",
     images: [
       {

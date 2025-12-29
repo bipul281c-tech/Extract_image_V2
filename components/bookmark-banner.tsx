@@ -27,7 +27,7 @@ export function BookmarkBanner({ show, onClose, imageCount = 0 }: BookmarkBanner
         ? `Just extracted ${imageCount} images using ExtractPics - free and no signup required!`
         : `Check out ExtractPics - extract images from any website for free!`
 
-    const shareUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.extractpics.com'
+    const shareUrl = typeof window !== 'undefined' ? window.location.origin : 'https://extractpics.com'
 
     const handleShareTwitter = () => {
         const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`

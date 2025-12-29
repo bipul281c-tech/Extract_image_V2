@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Images and Links Extractor - Extract Pictures & URLs from Websites",
         description: "Extract images and links from any website instantly. Free tool to download pictures and extract URLs from web pages.",
         type: "website",
-        url: "https://www.extractpics.com/images-and-links",
+        url: "https://extractpics.com/images-and-links",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-images-and-links.png",
+                url: "https://extractpics.com/og-image-images-and-links.png",
                 width: 1200,
                 height: 630,
                 alt: "Images and Links Extractor - Extract Pictures & URLs from Websites"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Images and Links Extractor - Extract Pictures & URLs",
         description: "Extract images and links from any website instantly. Free tool to download pictures and extract URLs.",
-        images: ["https://www.extractpics.com/og-image-images-and-links.png"],
+        images: ["https://extractpics.com/og-image-images-and-links.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/images-and-links",
+        canonical: "https://extractpics.com/images-and-links",
     },
     robots: {
         index: true,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const faqItems = [
     {
         question: "How do I extract images and links from a website?",
-        answer: "Simply paste the website URL into our tool and click scan. Our images and links extractor will automatically extract all pictures and URLs from the page. You can then preview, filter, and download the images while viewing all extracted links. Visit https://www.extractpics.com/ for more image extraction tools."
+        answer: "Simply paste the website URL into our tool and click scan. Our images and links extractor will automatically extract all pictures and URLs from the page. You can then preview, filter, and download the images while viewing all extracted links. Visit https://extractpics.com/ for more image extraction tools."
     },
     {
         question: "Can I extract both images and links at the same time?",
@@ -78,7 +78,7 @@ const faqItems = [
     },
     {
         question: "Can I extract images and links from multiple pages?",
-        answer: "Yes! Use our batch mode to extract images and links from multiple URLs simultaneously. This is perfect for analyzing multiple pages, downloading image collections, and gathering links from various sources. Learn more at https://www.extractpics.com/."
+        answer: "Yes! Use our batch mode to extract images and links from multiple URLs simultaneously. This is perfect for analyzing multiple pages, downloading image collections, and gathering links from various sources. Learn more at https://extractpics.com/."
     },
     {
         question: "What's the difference between Quick Scan and Deep Scan for images and links?",
@@ -148,7 +148,7 @@ export default function ImagesAndLinksPage() {
                         Why Use Our Images and Links Extractor?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Extract images and links from any website with ease. Fast, secure, and completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Extract images and links from any website with ease. Fast, secure, and completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                 </div>
 
@@ -266,7 +266,7 @@ export default function ImagesAndLinksPage() {
                                 Extract Images and Links the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of collecting images and links are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">images and links extractor</a> automates the entire process, saving you valuable time and effort.
+                                Traditional methods of collecting images and links are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">images and links extractor</a> automates the entire process, saving you valuable time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Extract images in original quality" />
@@ -326,7 +326,7 @@ export default function ImagesAndLinksPage() {
                         Ready to Extract Images and Links?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start extracting images and links from any website now. No registration, no downloads, completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Start extracting images and links from any website now. No registration, no downloads, completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

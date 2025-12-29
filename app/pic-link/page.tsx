@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Pic Link - Extract Picture Links from Any Website",
         description: "Get picture links from any website instantly. Extract image URLs and convert pictures to links with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/pic-link",
+        url: "https://extractpics.com/pic-link",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-pic-link.png",
+                url: "https://extractpics.com/og-image-pic-link.png",
                 width: 1200,
                 height: 630,
                 alt: "Pic Link - Extract Picture Links from Any Website"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Pic Link - Extract Picture Links from Any Website",
         description: "Get picture links from any website instantly. Extract image URLs and convert pictures to links.",
-        images: ["https://www.extractpics.com/og-image-pic-link.png"],
+        images: ["https://extractpics.com/og-image-pic-link.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/pic-link",
+        canonical: "https://extractpics.com/pic-link",
     },
     robots: {
         index: true,
@@ -139,7 +139,7 @@ export default function PicLinkPage() {
                         </div>
 
                         <p className="text-sm text-muted-foreground pt-4">
-                            Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer">ExtractPics.com</a> - Your trusted <a href="https://www.extractpics.com/" className="text-primary hover:underline">pic link</a> extraction tool
+                            Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold" target="_blank" rel="noopener noreferrer">ExtractPics.com</a> - Your trusted <a href="https://extractpics.com/" className="text-primary hover:underline">pic link</a> extraction tool
                         </p>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ export default function PicLinkPage() {
                                 Extract Pic Links the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of getting picture links are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline">pic link</a> extractor automates the entire process, saving you time and effort.
+                                Traditional methods of getting picture links are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline">pic link</a> extractor automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Extract all picture links instantly" />

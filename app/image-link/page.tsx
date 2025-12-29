@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Image Link - Extract Image Links from Any Website",
         description: "Extract image links from any website instantly. Get direct image URLs and download images from links. Free image link extractor tool.",
         type: "website",
-        url: "https://www.extractpics.com/image-link",
+        url: "https://extractpics.com/image-link",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-image-link.png",
+                url: "https://extractpics.com/og-image-image-link.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Link - Extract Image Links from Any Website"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Link - Extract Image Links from Any Website",
         description: "Extract image links from any website instantly. Get direct image URLs and download images from links.",
-        images: ["https://www.extractpics.com/og-image-image-link.png"],
+        images: ["https://extractpics.com/og-image-image-link.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-link",
+        canonical: "https://extractpics.com/image-link",
     },
     robots: {
         index: true,
@@ -155,7 +155,7 @@ export default function ImageLinkPage() {
                         Powerful Image Link Extraction
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Extract image links from any website with our advanced <Link href="https://www.extractpics.com/" className="text-primary hover:underline">image link tool</Link>.
+                        Extract image links from any website with our advanced <Link href="https://extractpics.com/" className="text-primary hover:underline">image link tool</Link>.
                     </p>
                 </div>
 
@@ -233,7 +233,7 @@ export default function ImageLinkPage() {
                             The Best Image Link Extractor
                         </h2>
                         <p className="text-muted-foreground text-lg leading-relaxed">
-                            Stop manually inspecting page source or using browser developer tools. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline">image link extractor</Link> automates the entire process of finding and extracting image URLs.
+                            Stop manually inspecting page source or using browser developer tools. Our <Link href="https://extractpics.com/" className="text-primary hover:underline">image link extractor</Link> automates the entire process of finding and extracting image URLs.
                         </p>
                         <div className="space-y-4">
                             <BenefitItem text="Extract unlimited image links for free" />
@@ -332,7 +332,7 @@ export default function ImageLinkPage() {
                         Start Extracting Image Links Now
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Extract image links from any website with our powerful <Link href="https://www.extractpics.com/" className="text-primary hover:underline">image link tool</Link>. No registration required, completely free.
+                        Extract image links from any website with our powerful <Link href="https://extractpics.com/" className="text-primary hover:underline">image link tool</Link>. No registration required, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconLink size={20} />

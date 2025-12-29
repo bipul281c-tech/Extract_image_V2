@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Download Image from Link - Free Online Image Downloader",
         description: "Download images from any link instantly. Paste a URL and extract all images from the website. Free, fast, and secure.",
         type: "website",
-        url: "https://www.extractpics.com/download-image-from-link",
+        url: "https://extractpics.com/download-image-from-link",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-image-from-link.png",
+                url: "https://extractpics.com/og-image-download-image-from-link.png",
                 width: 1200,
                 height: 630,
                 alt: "Download Image from Link - Free Online Image Downloader"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Download Image from Link - Free Online Image Downloader",
         description: "Download images from any link instantly. Paste a URL and extract all images from the website.",
-        images: ["https://www.extractpics.com/og-image-download-image-from-link.png"],
+        images: ["https://extractpics.com/og-image-download-image-from-link.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/download-image-from-link",
+        canonical: "https://extractpics.com/download-image-from-link",
     },
     robots: {
         index: true,
@@ -336,7 +336,7 @@ export default function DownloadImageFromLinkPage() {
                         Start downloading images from any website link now. No registration, no software, completely free.
                     </p>
                     <a
-                        href="https://www.extractpics.com/"
+                        href="https://extractpics.com/"
                         className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all"
                     >
                         <IconDownload size={20} />

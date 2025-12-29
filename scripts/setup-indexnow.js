@@ -133,7 +133,7 @@ function displayNextSteps(apiKey) {
 
   console.log(`${colors.bright}1. Verify Key File${colors.reset}`);
   info(`   File location: /public/${apiKey}.txt`);
-  info(`   Public URL: https://www.extractpics.com/${apiKey}.txt`);
+  info(`   Public URL: https://extractpics.com/${apiKey}.txt`);
   console.log('');
 
   console.log(`${colors.bright}2. Test Your Setup${colors.reset}`);
@@ -153,15 +153,15 @@ function displayNextSteps(apiKey) {
 
   console.log(`${colors.bright}4. Register with Bing Webmaster Tools${colors.reset}`);
   info('   a) Go to: https://www.bing.com/webmasters');
-  info('   b) Add and verify your site: www.extractpics.com');
+  info('   b) Add and verify your site: extractpics.com');
   info('   c) Navigate to: Sitemaps → Submit Sitemap');
-  info('      Submit: https://www.extractpics.com/sitemap.xml');
+  info('      Submit: https://extractpics.com/sitemap.xml');
   info('   d) Check IndexNow status in Webmaster Tools dashboard');
   console.log('');
 
   console.log(`${colors.bright}5. Test IndexNow Submission${colors.reset}`);
   info('   After deployment, trigger a notification:');
-  info('   curl -X POST https://www.extractpics.com/api/notify-crawl');
+  info('   curl -X POST https://extractpics.com/api/notify-crawl');
   info('   Expected response: {"success": true, "indexNow": {"status": "success"}}');
   console.log('');
 
@@ -174,16 +174,16 @@ function displayNextSteps(apiKey) {
   header('Your IndexNow Configuration:');
   console.log(`${colors.bright}API Key:${colors.reset}      ${colors.yellow}${apiKey}${colors.reset}`);
   console.log(`${colors.bright}Key File:${colors.reset}     /public/${apiKey}.txt`);
-  console.log(`${colors.bright}Key URL:${colors.reset}      https://www.extractpics.com/${apiKey}.txt`);
-  console.log(`${colors.bright}Sitemap URL:${colors.reset}  https://www.extractpics.com/sitemap.xml`);
-  console.log(`${colors.bright}API Endpoint:${colors.reset} https://www.extractpics.com/api/notify-crawl`);
+  console.log(`${colors.bright}Key URL:${colors.reset}      https://extractpics.com/${apiKey}.txt`);
+  console.log(`${colors.bright}Sitemap URL:${colors.reset}  https://extractpics.com/sitemap.xml`);
+  console.log(`${colors.bright}API Endpoint:${colors.reset} https://extractpics.com/api/notify-crawl`);
   console.log('');
 
   header('Adding New Images - Quick Reference:');
   info('1. Upload image to R2');
   info('2. Add entry to /data/seo-images.json');
   info('3. Deploy changes');
-  info('4. Trigger notification: curl -X POST https://www.extractpics.com/api/notify-crawl');
+  info('4. Trigger notification: curl -X POST https://extractpics.com/api/notify-crawl');
   info('5. Bing/Google will crawl within minutes!');
   console.log('');
 

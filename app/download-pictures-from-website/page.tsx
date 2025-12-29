@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Download Pictures from Website - Free Bulk Picture Downloader",
         description: "Download pictures from website instantly. Extract and save all pictures from any webpage in bulk with our free tool.",
         type: "website",
-        url: "https://www.extractpics.com/download-pictures-from-website",
+        url: "https://extractpics.com/download-pictures-from-website",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Download Pictures from Website - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Download Pictures from Website - Free Bulk Picture Downloader",
         description: "Download pictures from website instantly. Extract and save all pictures in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/download-pictures-from-website",
+        canonical: "https://extractpics.com/download-pictures-from-website",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function DownloadPicturesFromWebsitePage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The easiest way to <strong className="text-foreground">download pictures from website</strong>. Extract all pictures from any webpage in seconds. Download individually or in bulk as a ZIP file. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The easiest way to <strong className="text-foreground">download pictures from website</strong>. Extract all pictures from any webpage in seconds. Download individually or in bulk as a ZIP file. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -266,7 +266,7 @@ export default function DownloadPicturesFromWebsitePage() {
                                 The Smart Way to Download Pictures from Websites
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading pictures are slow and tedious. Our tool to <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">download pictures from website</a> automates the entire process, saving you time and effort while ensuring original quality.
+                                Traditional methods of downloading pictures are slow and tedious. Our tool to <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">download pictures from website</a> automates the entire process, saving you time and effort while ensuring original quality.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download pictures in original quality" />
@@ -325,7 +325,7 @@ export default function DownloadPicturesFromWebsitePage() {
                         Ready to Download Pictures from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a> to download pictures from website now. No registration, completely free.
+                        Start using <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a> to download pictures from website now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

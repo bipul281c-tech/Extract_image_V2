@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Image to Image URL - Convert Images to URLs",
         description: "Convert images to image URLs instantly. Extract image URLs from any website and get direct links to images.",
         type: "website",
-        url: "https://www.extractpics.com/image-to-image-url",
+        url: "https://extractpics.com/image-to-image-url",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-image-to-image-url.png",
+                url: "https://extractpics.com/og-image-image-to-image-url.png",
                 width: 1200,
                 height: 630,
                 alt: "Image to Image URL - Convert Images to URLs"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image to Image URL - Convert Images to URLs",
         description: "Convert images to image URLs instantly. Extract image URLs from any website.",
-        images: ["https://www.extractpics.com/og-image-image-to-image-url.png"],
+        images: ["https://extractpics.com/og-image-image-to-image-url.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-to-image-url",
+        canonical: "https://extractpics.com/image-to-image-url",
     },
     robots: {
         index: true,
@@ -152,7 +152,7 @@ export default function ImageToImageURLPage() {
                         Why Use Our Image to Image URL Tool?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Convert images to URLs from any website with ease. Fast, secure, and completely free. Visit <Link href="https://www.extractpics.com/" className="text-primary hover:underline">ExtractPics</Link> for more tools.
+                        Convert images to URLs from any website with ease. Fast, secure, and completely free. Visit <Link href="https://extractpics.com/" className="text-primary hover:underline">ExtractPics</Link> for more tools.
                     </p>
                 </div>
 
@@ -270,7 +270,7 @@ export default function ImageToImageURLPage() {
                                 Convert Image to URL the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of getting image URLs are slow and tedious. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image to image URL</Link> tool automates the entire process, saving you time and effort.
+                                Traditional methods of getting image URLs are slow and tedious. Our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image to image URL</Link> tool automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Extract direct image URLs" />
@@ -329,7 +329,7 @@ export default function ImageToImageURLPage() {
                         Ready to Extract Image URLs?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start converting images to URLs now with our free <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image to image URL</Link> tool. No registration, no downloads, completely free.
+                        Start converting images to URLs now with our free <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image to image URL</Link> tool. No registration, no downloads, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconLink size={20} />

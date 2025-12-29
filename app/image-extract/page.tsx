@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Image Extract - Extract Images from Any Website Instantly",
         description: "Extract images from any website instantly. Download and save all images in bulk with our free image extract tool.",
         type: "website",
-        url: "https://www.extractpics.com/image-extract",
+        url: "https://extractpics.com/image-extract",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-download-images.png",
+                url: "https://extractpics.com/og-image-download-images.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Extract - Free Tool"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Extract - Extract Images from Any Website Instantly",
         description: "Extract images from any website instantly. Download and save all images in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-download-images.png"],
+        images: ["https://extractpics.com/og-image-download-images.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-extract",
+        canonical: "https://extractpics.com/image-extract",
     },
     robots: {
         index: true,
@@ -116,7 +116,7 @@ export default function ImageExtractPage() {
                         </h1>
 
                         <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                            The most powerful <strong className="text-foreground">image extract</strong> tool to find and download all images from any website. Extract images in seconds with bulk download support. Powered by <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
+                            The most powerful <strong className="text-foreground">image extract</strong> tool to find and download all images from any website. Extract images in seconds with bulk download support. Powered by <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</a>.
                         </p>
 
                         <div className="flex flex-wrap items-center justify-center gap-6 pt-4">
@@ -271,7 +271,7 @@ export default function ImageExtractPage() {
                         Ready to Extract Images from Websites?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start using our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image extract</a> tool now. No registration, completely free.
+                        Start using our <a href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image extract</a> tool now. No registration, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

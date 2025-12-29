@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Facebook Image Downloader - Download Facebook Photos Free",
         description: "Download images and photos from Facebook instantly. Free Facebook image downloader tool with no login required.",
         type: "website",
-        url: "https://www.extractpics.com/facebook-image-downloader",
+        url: "https://extractpics.com/facebook-image-downloader",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-facebook-image-downloader.png",
+                url: "https://extractpics.com/og-image-facebook-image-downloader.png",
                 width: 1200,
                 height: 630,
                 alt: "Facebook Image Downloader - Download Facebook Photos"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Facebook Image Downloader - Download Facebook Photos Free",
         description: "Download images and photos from Facebook instantly with our free tool.",
-        images: ["https://www.extractpics.com/og-image-facebook-image-downloader.png"],
+        images: ["https://extractpics.com/og-image-facebook-image-downloader.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/facebook-image-downloader",
+        canonical: "https://extractpics.com/facebook-image-downloader",
     },
     robots: {
         index: true,
@@ -143,7 +143,7 @@ export default function FacebookImageDownloaderPage() {
                         <p className="text-foreground font-medium flex items-center justify-center gap-2">
                             Powered by
                             <a
-                                href="https://www.extractpics.com/"
+                                href="https://extractpics.com/"
                                 className="text-primary hover:underline flex items-center gap-1 font-bold"
                                 rel="noopener noreferrer"
                             >
@@ -282,7 +282,7 @@ export default function FacebookImageDownloaderPage() {
                             <p>
                                 For more powerful image extraction tools and features, visit{" "}
                                 <a
-                                    href="https://www.extractpics.com/"
+                                    href="https://extractpics.com/"
                                     className="text-primary hover:underline font-semibold"
                                     rel="noopener noreferrer"
                                 >
@@ -326,7 +326,7 @@ export default function FacebookImageDownloaderPage() {
                         <p className="text-muted-foreground text-sm">
                             Looking for more image extraction tools?{" "}
                             <a
-                                href="https://www.extractpics.com/"
+                                href="https://extractpics.com/"
                                 className="text-primary hover:underline font-semibold"
                                 rel="noopener noreferrer"
                             >

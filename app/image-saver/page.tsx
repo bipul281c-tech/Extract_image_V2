@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Image Saver - Save Images from Any Website",
         description: "Save images from any website instantly with our free image saver tool. Extract and save pictures in seconds.",
         type: "website",
-        url: "https://www.extractpics.com/image-saver",
+        url: "https://extractpics.com/image-saver",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-image-saver.png",
+                url: "https://extractpics.com/og-image-image-saver.png",
                 width: 1200,
                 height: 630,
                 alt: "Image Saver - Save Images from Any Website"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Image Saver - Save Images from Any Website",
         description: "Save images from any website instantly with our free image saver tool.",
-        images: ["https://www.extractpics.com/og-image-image-saver.png"],
+        images: ["https://extractpics.com/og-image-image-saver.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/image-saver",
+        canonical: "https://extractpics.com/image-saver",
     },
     robots: {
         index: true,
@@ -155,7 +155,7 @@ export default function ImageSaverPage() {
                         Why Use Our Image Saver?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Save images from any website with ease. Fast, secure, and completely free. Visit <Link href="https://www.extractpics.com/" className="text-primary hover:underline">ExtractPics</Link> for more tools.
+                        Save images from any website with ease. Fast, secure, and completely free. Visit <Link href="https://extractpics.com/" className="text-primary hover:underline">ExtractPics</Link> for more tools.
                     </p>
                 </div>
 
@@ -273,7 +273,7 @@ export default function ImageSaverPage() {
                                 Save Images the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of saving images are slow and tedious. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image saver</Link> automates the entire process, saving you time and effort.
+                                Traditional methods of saving images are slow and tedious. Our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image saver</Link> automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Save images in original quality" />
@@ -332,7 +332,7 @@ export default function ImageSaverPage() {
                         Ready to Save Images?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start saving images from any website now with our free <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">image saver</Link> tool. No registration, no downloads, completely free.
+                        Start saving images from any website now with our free <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">image saver</Link> tool. No registration, no downloads, completely free.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

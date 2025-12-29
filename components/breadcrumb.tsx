@@ -76,7 +76,7 @@ export function Breadcrumb({ pageTitle, customItems }: BreadcrumbProps) {
             "@type": "ListItem",
             "position": index + 1,
             "name": item.label,
-            "item": `https://www.extractpics.com${item.href}`
+            "item": `https://extractpics.com${item.href}`
         }))
     };
 

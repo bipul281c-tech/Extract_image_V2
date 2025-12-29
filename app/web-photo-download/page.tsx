@@ -23,11 +23,11 @@ export const metadata: Metadata = {
         title: "Web Photo Download - Download Photos from Any Website",
         description: "Download photos from any website instantly. Extract and save web images in bulk with our free photo download tool.",
         type: "website",
-        url: "https://www.extractpics.com/web-photo-download",
+        url: "https://extractpics.com/web-photo-download",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-web-photo-download.png",
+                url: "https://extractpics.com/og-image-web-photo-download.png",
                 width: 1200,
                 height: 630,
                 alt: "Web Photo Download - Free Website Photo Downloader"
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Web Photo Download - Download Photos from Any Website",
         description: "Download photos from any website instantly. Extract and save web images in bulk with our free tool.",
-        images: ["https://www.extractpics.com/og-image-web-photo-download.png"],
+        images: ["https://extractpics.com/og-image-web-photo-download.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/web-photo-download",
+        canonical: "https://extractpics.com/web-photo-download",
     },
     robots: {
         index: true,
@@ -270,7 +270,7 @@ export default function WebPhotoDownloadPage() {
                                 Download Web Photos the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of downloading photos from websites are slow and tedious. Our <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">web photo download tool</Link> automates the entire process, saving you time and effort.
+                                Traditional methods of downloading photos from websites are slow and tedious. Our <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">web photo download tool</Link> automates the entire process, saving you time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Download photos in original quality" />
@@ -329,7 +329,7 @@ export default function WebPhotoDownloadPage() {
                         Ready to Download Web Photos?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start downloading photos from any website now with <Link href="https://www.extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</Link>. No registration, no downloads, completely free.
+                        Start downloading photos from any website now with <Link href="https://extractpics.com/" className="text-primary hover:underline font-semibold">ExtractPics</Link>. No registration, no downloads, completely free.
                     </p>
                     <Link href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />

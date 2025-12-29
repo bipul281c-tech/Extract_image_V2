@@ -22,11 +22,11 @@ export const metadata: Metadata = {
         title: "Photos Saver - Save Multiple Photos from Websites",
         description: "Save multiple photos from any website with our free photos saver tool. Bulk save and download photos from web pages.",
         type: "website",
-        url: "https://www.extractpics.com/photos-saver",
+        url: "https://extractpics.com/photos-saver",
         siteName: "ExtractPics",
         images: [
             {
-                url: "https://www.extractpics.com/og-image-photos-saver.png",
+                url: "https://extractpics.com/og-image-photos-saver.png",
                 width: 1200,
                 height: 630,
                 alt: "Photos Saver - Save Multiple Photos from Websites"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Photos Saver - Save Multiple Photos from Websites",
         description: "Save multiple photos from any website. Free bulk photos saver tool.",
-        images: ["https://www.extractpics.com/og-image-photos-saver.png"],
+        images: ["https://extractpics.com/og-image-photos-saver.png"],
     },
     alternates: {
-        canonical: "https://www.extractpics.com/photos-saver",
+        canonical: "https://extractpics.com/photos-saver",
     },
     robots: {
         index: true,
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 const faqItems = [
     {
         question: "How do I save multiple photos from a website?",
-        answer: "Simply paste the website URL into our photos saver tool and click scan. Our tool will extract all photos from the page, allowing you to select and save multiple photos at once. You can save them individually or bulk save all photos as a ZIP file. Visit https://www.extractpics.com/ for more photo tools."
+        answer: "Simply paste the website URL into our photos saver tool and click scan. Our tool will extract all photos from the page, allowing you to select and save multiple photos at once. You can save them individually or bulk save all photos as a ZIP file. Visit https://extractpics.com/ for more photo tools."
     },
     {
         question: "Can I save all photos from a page at once?",
@@ -86,7 +86,7 @@ const faqItems = [
     },
     {
         question: "Is my data safe when using the photos saver?",
-        answer: "Absolutely! Our photos saver runs entirely in your browser - no URLs or photos are sent to our servers. All photo extraction and saving happens locally on your device, ensuring complete privacy and security. Your browsing data and saved photos remain completely private. Learn more at https://www.extractpics.com/."
+        answer: "Absolutely! Our photos saver runs entirely in your browser - no URLs or photos are sent to our servers. All photo extraction and saving happens locally on your device, ensuring complete privacy and security. Your browsing data and saved photos remain completely private. Learn more at https://extractpics.com/."
     }
 ];
 
@@ -148,7 +148,7 @@ export default function PhotosSaverPage() {
                         Why Use Our Photos Saver?
                     </h2>
                     <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                        Save multiple photos from any website with ease. Fast, secure, and completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Save multiple photos from any website with ease. Fast, secure, and completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                 </div>
 
@@ -266,7 +266,7 @@ export default function PhotosSaverPage() {
                                 Save Photos in Bulk the Smart Way
                             </h2>
                             <p className="text-muted-foreground text-lg leading-relaxed">
-                                Traditional methods of saving photos are slow and tedious. Our <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">photos saver</a> automates the entire process, saving you valuable time and effort.
+                                Traditional methods of saving photos are slow and tedious. Our <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">photos saver</a> automates the entire process, saving you valuable time and effort.
                             </p>
                             <div className="space-y-4">
                                 <BenefitItem text="Save multiple photos in original quality" />
@@ -325,7 +325,7 @@ export default function PhotosSaverPage() {
                         Ready to Save Multiple Photos?
                     </h2>
                     <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-                        Start saving photos in bulk from any website now. No registration, no downloads, completely free. Visit <a href="https://www.extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
+                        Start saving photos in bulk from any website now. No registration, no downloads, completely free. Visit <a href="https://extractpics.com/" className="text-primary hover:underline font-medium">ExtractPics.com</a> for more tools.
                     </p>
                     <a href="#" className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 font-bold text-lg transition-all">
                         <IconDownload size={20} />
