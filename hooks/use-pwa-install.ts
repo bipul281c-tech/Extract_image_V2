@@ -27,9 +27,19 @@ export function usePwaInstall() {
       setDeferredPrompt(e as BeforeInstallPromptEvent);
       setIsInstallable(true);
 
-      // Show prompt after 2nd extraction
+      // Show prompt after 2nd extraction IF NOT dismissed recently
       const stats = getStats();
-      if (stats.totalExtractions >= 2) {
+      const dismissedAt = localStorage.getItem('pwa_prompt_dismissed');
+      let shouldShow = stats.totalExtractions >= 2;
+
+      if (dismissedAt) {
+        const daysSinceDismissed = (Date.now() - parseInt(dismissedAt)) / (1000 * 60 * 60 * 24);
+        if (daysSinceDismissed < 30) {
+          shouldShow = false;
+        }
+      }
+
+      if (shouldShow) {
         setShowPrompt(true);
       }
     };
@@ -82,11 +92,11 @@ export function usePwaInstall() {
   const checkShouldShowPrompt = useCallback(() => {
     if (isInstalled || !isInstallable) return false;
 
-    // Check if dismissed recently (within 7 days)
+    // Check if dismissed recently (within 30 days)
     const dismissedAt = localStorage.getItem('pwa_prompt_dismissed');
     if (dismissedAt) {
       const daysSinceDismissed = (Date.now() - parseInt(dismissedAt)) / (1000 * 60 * 60 * 24);
-      if (daysSinceDismissed < 7) return false;
+      if (daysSinceDismissed < 30) return false;
     }
 
     const stats = getStats();
