@@ -19,29 +19,21 @@ s3 = boto3.client(
     aws_secret_access_key=R2_SECRET_ACCESS_KEY,
 )
 
-ARTIFACT_DIR = "/Users/bipulkumar/.gemini/antigravity/brain/d7967891-24ba-4b47-941e-76cf79d43f92"
+ARTIFACT_DIR = "/Users/bipulkumar/.gemini/antigravity/brain/784deeee-7f9c-4e08-955c-f02f87fc0bf7"
 
 # Mapping: original_filename_part -> new_filename_base
 images_to_upload = [
     {
-        "search": "alt_text_best_practices_infographic",
-        "new_name": "infographic-alt-text-best-practices.webp"
+        "search": "featured_image_extractor",
+        "new_name": "blog-image-extractor-featured.webp"
     },
     {
-        "search": "image_sitemaps_infographic",
-        "new_name": "infographic-image-sitemaps.webp"
+        "search": "manual_vs_automated_comparison",
+        "new_name": "blog-image-extractor-comparison.webp"
     },
     {
-        "search": "lossy_vs_lossless_compression_infographic",
-        "new_name": "infographic-lossy-vs-lossless.webp"
-    },
-    {
-        "search": "favicon_design_tips_infographic",
-        "new_name": "infographic-favicon-design-tips.webp"
-    },
-    {
-        "search": "cdn_benefits_infographic",
-        "new_name": "infographic-cdn-benefits.webp"
+        "search": "image_extraction_workflow",
+        "new_name": "blog-image-extractor-workflow.webp"
     }
 ]
 

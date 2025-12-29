@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if Supabase is configured
-    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    if (!supabase) {
       console.warn('Supabase not configured, skipping email subscription');
       return NextResponse.json(
         { success: true, message: 'Email subscription recorded (demo mode)' },

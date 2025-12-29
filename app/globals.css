@@ -456,5 +456,37 @@ main {
   --input: #3F3F3F;
   --ring: #F87B1B;
   --selection: #262626;
-  /* Changed selection color in dark mode to something more neutral */
+}
+
+/* Blog Post Content Styling */
+.prose-blog {
+  color: var(--foreground);
+  font-size: 1.125rem;
+  line-height: 1.85;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 640px) {
+  .prose-blog {
+    font-size: 1.1875rem;
+    line-height: 1.9;
+  }
+}
+
+/* First paragraph after heading - no top margin */
+.prose-blog h1+p,
+.prose-blog h2+p,
+.prose-blog h3+p,
+.prose-blog h4+p {
+  margin-top: 0;
+}
+
+/* Remove margin from first child */
+.prose-blog>*:first-child {
+  margin-top: 0 !important;
+}
+
+/* Remove margin from last child */
+.prose-blog>*:last-child {
+  margin-bottom: 0 !important;
 }

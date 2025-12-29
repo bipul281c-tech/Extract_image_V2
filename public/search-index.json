@@ -1,0 +1,37 @@
+[
+  {
+    "slug": "blog-formatting-guide",
+    "title": "Blog Post Formatting Guide",
+    "description": "Learn how to format blog posts using MDX - including frontmatter, headings, code blocks, tables, and more.",
+    "category": "guides",
+    "content": "Blog Post Formatting Guide This guide covers all formatting options available for blog posts. ---  Frontmatter Every post starts with frontmatter between  markers: | Field | Required | Description | |-------|----------|-------------| | title | Yes | Post title | | slug | Yes | URL-friendly identifier | | description | Yes | SEO meta description | | category | Yes | tutorials, guides, or news | | author | Yes | Author name | | publishedAt | Yes | Date in YYYY-MM-DD format | | updatedAt | No | Las"
+  },
+  {
+    "slug": "image-extractor-download-images-from-websites",
+    "title": "Image Extractor: How to Download Images from Any Website in Seconds",
+    "description": "Learn how an image extractor works and discover the fastest way to extract images from website URLs. Free bulk download tool for designers, marketers, and developers.",
+    "category": "guides",
+    "content": "Image Extractor: How to Download Images from Any Website in Seconds If you've ever needed to download multiple images from a website, you know how tedious the manual process can be—right-clicking each image, saving it individually, and organizing files one by one [web:16]. An image extractor is a specialized online tool that automates this entire workflow by scanning webpages, identifying all image files, and allowing you to download them in bulk with just a few clicks [web:6]. In this comprehen"
+  },
+  {
+    "slug": "image-optimization-best-practices",
+    "title": "Image Optimization Best Practices for Web Performance",
+    "description": "Discover the essential techniques for optimizing images for web performance, including format selection, compression, and modern delivery methods.",
+    "category": "guides",
+    "content": "Image Optimization Best Practices for Web Performance Images account for approximately 50% of the average webpage's total weight. Optimizing them properly can dramatically improve your website's loading speed, user experience, and search engine rankings.  Why Image Optimization Matters Unoptimized images lead to: - Slower page load times - Users abandon sites that take more than 3 seconds to load - Higher bandwidth costs - Especially critical for mobile users - Poor Core Web Vitals - Affecting y"
+  },
+  {
+    "slug": "introducing-bulk-extraction-feature",
+    "title": "Introducing Bulk Extraction: Download Hundreds of Images in Seconds",
+    "description": "We're excited to announce the new bulk extraction feature that lets you download hundreds of images from multiple URLs simultaneously.",
+    "category": "news",
+    "content": "Introducing Bulk Extraction: Download Hundreds of Images in Seconds We're thrilled to announce the launch of our most requested feature: Bulk Extraction. This powerful new capability allows you to extract images from multiple URLs simultaneously, saving you even more time.  What's New? With Bulk Extraction, you can now: - Process multiple URLs at once (up to 50 URLs per batch) - Queue extractions and let them run in the background - Download everything as a single organized ZIP file - Track prog"
+  },
+  {
+    "slug": "how-to-extract-images-from-any-website",
+    "title": "How to Extract Images from Any Website",
+    "description": "Learn the step-by-step process to extract and download images from any website using ExtractPics. A complete beginner's guide to bulk image extraction.",
+    "category": "tutorials",
+    "content": "How to Extract Images from Any Website Have you ever found yourself wanting to download multiple images from a website but dreading the thought of saving each one individually? Whether you're a designer gathering inspiration, a researcher collecting visual data, or simply wanting to save memorable photos, ExtractPics makes bulk image extraction effortless.  Why Use ExtractPics? Traditional methods of saving images involve right-clicking each image and saving them one by one. This process is: - T"
+  }
+]
