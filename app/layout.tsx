@@ -23,6 +23,7 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { ServiceWorkerRegister } from "@/components/service-worker-register";
 import { PwaInstallPrompt } from "@/components/pwa-install-prompt";
 import { EmailCapture } from "@/components/email-capture";
+import { SocialProofCounter } from "@/components/social-proof-counter";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://extractpics.com'),
@@ -124,6 +125,9 @@ export default function RootLayout({
           <Navigation />
 
           <main className="flex-grow flex flex-col items-center pt-32 px-4 relative z-10 w-full">
+            <div className="w-full flex justify-center pb-6">
+              <SocialProofCounter />
+            </div>
             <Breadcrumb />
             {children}
           </main>
