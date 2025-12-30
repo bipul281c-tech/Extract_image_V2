@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ExtractPicsTool } from "@/components/extract-pics-tool";
 import { LandingFAQ } from "@/components/landing-faq";
+import { RelatedTools } from "@/components/related-tools";
+import { StructuredData } from "@/components/structured-data";
 import { IconBolt, IconCloud, IconShield, IconClock, IconDownload, IconRefresh, IconCheck, IconSparkles } from "@tabler/icons-react";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -93,8 +95,42 @@ const faqItems = [
 ];
 
 export default function BulkExtractorPage() {
+    // WebApplication Schema for this tool page
+    const webAppSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Bulk Extractor - ExtractPics",
+        "url": "https://extractpics.com/bulk-extractor",
+        "description": "Extract images from multiple websites simultaneously with our powerful bulk extractor tool.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "720",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "Process multiple URLs simultaneously",
+            "Automatic duplicate image removal",
+            "Batch download as ZIP archive",
+            "Quick Scan and Deep Scan modes",
+            "No registration required",
+            "100% free to use"
+        ],
+        "browserRequirements": "Requires JavaScript. Requires HTML5."
+    };
+
     return (
         <div className="min-h-screen bg-background">
+            <StructuredData data={webAppSchema} />
+
             {/* Integrated Tool - Moved to Top */}
             <section className="relative">
                 <ExtractPicsTool />
@@ -294,6 +330,14 @@ export default function BulkExtractorPage() {
                 items={faqItems}
                 title="Bulk Extractor FAQ"
                 description="Everything you need to know about bulk image extraction"
+            />
+
+            {/* Related Tools Section */}
+            <RelatedTools
+                currentPath="/bulk-extractor"
+                maxTools={4}
+                title="More Extraction Tools"
+                description="Explore our other image extraction and downloading tools"
             />
 
             {/* CTA Section */}

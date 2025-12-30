@@ -3,6 +3,7 @@ import { ExtractPicsTool } from "@/components/extract-pics-tool";
 import { FeaturesGrid } from "@/components/features-grid";
 import { LandingFAQ } from "@/components/landing-faq";
 import { StructuredData } from "@/components/structured-data";
+import { SocialProofCounter } from "@/components/social-proof-counter";
 
 export const metadata: Metadata = {
     title: "ExtractPics - Free Image Extractor & Downloader Tool | Extract Images from Any Website",
@@ -224,6 +225,11 @@ export default function Page() {
             <StructuredData data={organizationSchema} />
             <StructuredData data={siteNavigationSchema} />
             <StructuredData data={breadcrumbSchema} />
+
+            {/* Social Proof Counter */}
+            <div className="w-full flex justify-center pt-6 pb-2">
+                <SocialProofCounter />
+            </div>
 
             <ExtractPicsTool />
 

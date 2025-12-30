@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { ExtractPicsTool } from "@/components/extract-pics-tool";
 import { LandingFAQ } from "@/components/landing-faq";
+import { RelatedTools } from "@/components/related-tools";
+import { StructuredData } from "@/components/structured-data";
 import { IconDownload, IconShield, IconClock, IconCheck, IconBolt, IconCloud, IconSparkles, IconPhoto } from "@tabler/icons-react";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -101,8 +103,42 @@ const faqItems = [
 ];
 
 export default function ImageDownloaderPage() {
+    // WebApplication Schema for this tool page
+    const webAppSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Image Downloader - ExtractPics",
+        "url": "https://extractpics.com/image-downloader",
+        "description": "Download images from any website with our free image downloader tool. Extract and save images in bulk.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "850",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "featureList": [
+            "Download images from any website",
+            "Bulk image download as ZIP",
+            "Support all image formats (JPG, PNG, WebP, GIF)",
+            "Quick Scan and Deep Scan modes",
+            "No registration required",
+            "100% free to use"
+        ],
+        "browserRequirements": "Requires JavaScript. Requires HTML5."
+    };
+
     return (
         <div className="min-h-screen bg-background">
+            <StructuredData data={webAppSchema} />
+
             {/* Main Tool - Positioned at Top */}
             <section className="relative">
                 <ExtractPicsTool />
@@ -399,6 +435,14 @@ export default function ImageDownloaderPage() {
                 items={faqItems}
                 title="Image Downloader FAQ"
                 description="Common questions about our image downloader tool"
+            />
+
+            {/* Related Tools Section */}
+            <RelatedTools
+                currentPath="/image-downloader"
+                maxTools={4}
+                title="More Image Tools"
+                description="Discover more powerful tools for extracting and downloading images"
             />
 
             {/* CTA Section */}

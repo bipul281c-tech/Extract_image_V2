@@ -21,6 +21,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    // Note: Host directive removed - not recognized by Google/Bing
+    // Canonical URL is handled via metadata in layout.tsx instead
   }
 }
