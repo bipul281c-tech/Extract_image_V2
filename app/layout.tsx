@@ -91,6 +91,9 @@ export const metadata: Metadata = {
     title: "ExtractPics",
   },
   category: 'technology',
+  other: {
+    'msvalidate.01': '57B733ACCCF5A78AC04874FEDCACCD2A',
+  },
 };
 
 export const viewport: Viewport = {
